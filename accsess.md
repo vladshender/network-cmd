@@ -1,106 +1,26 @@
-<details>
-  <summary> HW-56 - доступ </summary>
-
-| Command                                       |               | Notes     |      |
-| :--------                                     | :--------     | :-------- | :--- |
-|||||
-| display board 0/16 | | Переглянути стан інтерфейсу             |       
-||перегляд МАС-адреси|||
-|enable||||
-|display mac-address port 0/11/1||||
-|mac-address port 0/11/1 ont 11 || Відібрати по ONT ||
-|display mac-address vlan 602 || Відібрати по vlan ||
-||Перегляд логів|||
-|display alarm history all |
-|display alarm active all||||
-	
-</details>
-
 --- 
 <details>
-  <summary>  FTTB RAISECOM – в назві обладнання є -f-  ck-zvenygor-shevch28-f-rc2s1 </summary>
+  <summary>  BDCOM  zt-krasnobirka-druzhby1-bd1s1 </summary>
 
 | Command                                       |               | Notes     |      |
 | :--------                                     | :--------     | :-------- | :--- |
-|show interface brief ||Перегляд інформації по всіх портах. ||
-||Перегляд МАС-адреси
-|show mac-address dynamic gigaethernet 1/1/23  ||Перегляд МАС-адреси по порту ||
-|show mac-address dynamic vlan 602             ||Перегляд МАС-адреси по vlan  ||
-||Перегляд логів ||
-|show logging history 
-|show logging buffer 
-|show logging buffer \| include 1/1/23 
-|show alarm log \| include 1/18 
-||Перегляд оптичних показників порту ||
-| show transceiver ddm gigaethernet 1/1/28 
-| show transceiver ddm alarm history ||Перегляд історії помилок оптичних показників ||
-
-
-
-| Command                                       |               | Notes     |      |
-| :--------                                     | :--------     | :-------- | :--- |
-|||||
-
-</details>
-
---- 
-<details>
-  <summary>  - доступ </summary>
-
-| Command                                       |               | Notes     |      |
-| :--------                                     | :--------     | :-------- | :--- |
-|||||
-
-</details>
-
---- 
-<details>
-  <summary>  - доступ </summary>
-
-| Command                                       |               | Notes     |      |
-| :--------                                     | :--------     | :-------- | :--- |
-|||||
+| enable
+|                              | Стан інтерфейсів   ||
+| show interface brief ||  ||
+| show interface ePON 0/4:42
+|                              | МАС-адреси         ||
+| show mac address-table interface epoN 0/2:32        ||Перегляд МАС-адреси по порту ||
+| show mac address-table vlan 604                     ||Перегляд МАС-адреси по vlan  ||
+|                              | логи               ||
+| show log 
+| show logging
+| show logging \| include EPON0/1:5
+|                              | оптичні показникі  ||
+|  
 
 </details>
 
 
-
-
-
-
-
-D-LINK 
-Перегляд інформації по портам 
-mk-pervomaj-d3s1:admin#show ports 
-Примітка. Якщо порт піднятий, то у колонці буде 1000/full/none. У разі падіння порту Link Down. 
-Перегляд мак-адреси. 
-mk-pervomaj-d3s1:admin#show fdb  port 2 
-mk-pervomaj-d3s1:admin#show fdb vlanid 604 
-Перегляд логів 
-mk-pervomaj-d3s1:admin#show log 
-Перегляд оптичних показників 
-mk-pervomaj-d3s1:admin#show ddm ports status 
-
-
-57.128.20.119
-
-
-
-
-BDCOM 
-Необхідно увімкнути Enable-режим. 
-zt-krasnobirka-druzhby1-bd1s1>enable 
-Перегляд всіх портів. 
-zt-krasnobirka-druzhby1-bd1s1#show interface brief 
-hm-zakupne-bd1s1#show interface ePON 0/4:42 
-Перегляд МАС-адрес по назві порту 
-zt-krasnobirka-druzhby1-bd1s1#show mac address-table interface epoN 0/2:32 
-Перегляд МАС-адрес по VLAN 
-zt-krasnobirka-druzhby1-bd1s1#show mac address-table vlan 604 
-Перегляд логів 
-zt-krasnobirka-druzhby1-bd1s1#show logging 
-Використовуючи фільтр 
-zt-krasnobirka-druzhby1-bd1s1#show logging | include EPON0/1:5 
 
 ZTE 
 ko-romankiv-sondol-f-zt5s1>show port ½ 
@@ -156,32 +76,6 @@ mBAN> show bridge mactable interface dsl5:1_40
 mBAN> show alarm 
 
 
---- 
-<details>
-  <summary>  - доступ </summary>
-
-</details>
-
---- 
-<details>
-  <summary>  - доступ </summary>
-
-</details>
-
---- 
-<details>
-  <summary>  - доступ </summary>
-
-</details>
-
---- 
-<details>
-  <summary>  - доступ </summary>
-
-</details>
-
-
-
 Iskratel (SI3000)
 Перегляд інформації по інтерфейсу
 show port all
@@ -205,3 +99,87 @@ rv-zdolbun-grush15-pon-ik1s2#show mac-addr-table interface 0/6/35
 rv-zdolbun-grush15-pon-ik1s2#show sysinfo 
 Перегляд логів
 dc-svyatogirsk-maz54-pon-ik1s1#show logging file MsgErr 
+
+
+
+<details>
+  <summary> HW-56 - доступ </summary>
+
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+|||||
+| display board 0/16 | | Переглянути стан інтерфейсу             |       
+||перегляд МАС-адреси|||
+|enable||||
+|display mac-address port 0/11/1||||
+|mac-address port 0/11/1 ont 11 || Відібрати по ONT ||
+|display mac-address vlan 602 || Відібрати по vlan ||
+||Перегляд логів|||
+|display alarm history all |
+|display alarm active all||||
+	
+</details>
+
+--- 
+<details>
+  <summary>  FTTB RAISECOM – в назві обладнання є -f-  ck-zvenygor-shevch28-f-rc2s1 </summary>
+
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+|show interface brief ||Перегляд інформації по всіх портах. ||
+||Перегляд МАС-адреси
+|show mac-address dynamic gigaethernet 1/1/23  ||Перегляд МАС-адреси по порту ||
+|show mac-address dynamic vlan 602             ||Перегляд МАС-адреси по vlan  ||
+||Перегляд логів ||
+|show logging history 
+|show logging buffer 
+|show logging buffer \| include 1/1/23 
+|show alarm log \| include 1/18 
+||Перегляд оптичних показників порту ||
+| show transceiver ddm gigaethernet 1/1/28 
+| show transceiver ddm alarm history ||Перегляд історії помилок оптичних показників ||
+
+</details>
+
+--- 
+<details>
+  <summary>  D-LINK mk-pervomaj-d3s1 </summary>
+
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+|                              | Стан інтерфейсів   ||
+| show ports || 1000/full/none LinkDown ||
+|                              | МАС-адреси         ||
+| show fdb  port 2                ||Перегляд МАС-адреси по порту ||
+| show fdb vlanid 604             ||Перегляд МАС-адреси по vlan  ||
+|                              | логи               ||
+| show log 
+| show logging buffer 
+| show logging buffer \| include 1/1/23 
+| show alarm log \| include 1/18 
+|                              | оптичні показникі  ||
+| show ddm ports status 
+
+</details>
+
+--- 
+<details>
+  <summary>  BDCOM  zt-krasnobirka-druzhby1-bd1s1 </summary>
+
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+| enable
+|                              | Стан інтерфейсів   ||
+| show interface brief ||  ||
+| show interface ePON 0/4:42
+|                              | МАС-адреси         ||
+| show mac address-table interface epoN 0/2:32        ||Перегляд МАС-адреси по порту ||
+| show mac address-table vlan 604                     ||Перегляд МАС-адреси по vlan  ||
+|                              | логи               ||
+| show log 
+| show logging
+| show logging \| include EPON0/1:5
+|                              | оптичні показникі  ||
+|  
+
+</details>
