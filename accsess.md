@@ -1,33 +1,73 @@
-HW-56 - доступ 
-Переглянути стан інтерфейсу
-od-ode08-19-t500-hw-56s1>display board 0/16 
-Для перегляду МАС-адреси переходимо в ENABLE 
-od-ode08-19-t500-hw-56s1>enable 
-od-ode08-19-t500-hw-56s1#display mac-address port 0/11/1 
-Відібрати по ONT 
-od-ode08-19-t500-hw-56s1#display mac-address port 0/11/1 ont 11 
-Відібрати по vlan 
-od-ode08-19-t500-hw-56s1#display mac-address vlan 602 
-Перегляд логів 
-od-ode08-19-t500-hw-56s1#display alarm active all 
-Інколи display alarm history all 
+<details>
+  <summary> HW-56 - доступ </summary>
 
-FTTB RAISECOM – в назві обладнання є -f- 
-Перегляд інформації по всіх портах. 
-ck-zvenygor-shevch28-f-rc2s1#show interface brief 
-Перегляд МАС-адреси по порту 
-ck-zvenygor-shevch28-f-rc2s1#show mac-address dynamic gigaethernet 1/1/23 
-Перегляд МАС-адреси по vlan 
-ck-zvenygor-shevch28-f-rc2s1#show mac-address dynamic vlan 602 
-Перегляд логів 
-ck-zvenygor-shevch28-f-rc2s1#show logging history 
-ck-zvenygor-shevch28-f-rc2s1#show logging buffer 
-ck-zvenygor-shevch28-f-rc2s1#show logging buffer | include 1/1/23 
-ko-romankiv-sondol-f-rc4s5#show alarm log | include 1/18 
-Перегляд оптичних показників порту 
-ck-zvenygor-shevch28-f-rc2s1#show transceiver ddm gigaethernet 1/1/28 
-Перегляд історії помилок оптичних показників 
-ck-zvenygor-shevch28-f-rc2s1#show transceiver ddm alarm history 
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+|||||
+| display board 0/16 | | Переглянути стан інтерфейсу             |       
+||перегляд МАС-адреси|||
+|enable||||
+|display mac-address port 0/11/1||||
+|mac-address port 0/11/1 ont 11 || Відібрати по ONT ||
+|display mac-address vlan 602 || Відібрати по vlan ||
+||Перегляд логів|||
+|display alarm history all |
+|display alarm active all||||
+	
+</details>
+
+--- 
+<details>
+  <summary>  FTTB RAISECOM – в назві обладнання є -f-  ck-zvenygor-shevch28-f-rc2s1 </summary>
+
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+|show interface brief ||Перегляд інформації по всіх портах. ||
+||Перегляд МАС-адреси
+|show mac-address dynamic gigaethernet 1/1/23  ||Перегляд МАС-адреси по порту ||
+|show mac-address dynamic vlan 602             ||Перегляд МАС-адреси по vlan  ||
+||Перегляд логів ||
+|show logging history 
+|show logging buffer 
+|show logging buffer \| include 1/1/23 
+|show alarm log \| include 1/18 
+||Перегляд оптичних показників порту ||
+| show transceiver ddm gigaethernet 1/1/28 
+| show transceiver ddm alarm history ||Перегляд історії помилок оптичних показників ||
+
+
+
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+|||||
+
+</details>
+
+--- 
+<details>
+  <summary>  - доступ </summary>
+
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+|||||
+
+</details>
+
+--- 
+<details>
+  <summary>  - доступ </summary>
+
+| Command                                       |               | Notes     |      |
+| :--------                                     | :--------     | :-------- | :--- |
+|||||
+
+</details>
+
+
+
+
+
+
 
 D-LINK 
 Перегляд інформації по портам 
@@ -114,6 +154,33 @@ mBAN> show bridge mactable interface dsl5:1_40
 Примітка. Додати коли 1_33 або 1_40 для DHCP та PPPoE (вказується в АРМУС). Може бути лише в одному з них, в разі відсутності в обох командах – МАС-адреса відсутня. 
 Переглянути логи на обладнанні. 
 mBAN> show alarm 
+
+
+--- 
+<details>
+  <summary>  - доступ </summary>
+
+</details>
+
+--- 
+<details>
+  <summary>  - доступ </summary>
+
+</details>
+
+--- 
+<details>
+  <summary>  - доступ </summary>
+
+</details>
+
+--- 
+<details>
+  <summary>  - доступ </summary>
+
+</details>
+
+
 
 Iskratel (SI3000)
 Перегляд інформації по інтерфейсу
