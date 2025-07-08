@@ -1,0 +1,140 @@
+HW-56 - доступ 
+Переглянути стан інтерфейсу
+od-ode08-19-t500-hw-56s1>display board 0/16 
+Для перегляду МАС-адреси переходимо в ENABLE 
+od-ode08-19-t500-hw-56s1>enable 
+od-ode08-19-t500-hw-56s1#display mac-address port 0/11/1 
+Відібрати по ONT 
+od-ode08-19-t500-hw-56s1#display mac-address port 0/11/1 ont 11 
+Відібрати по vlan 
+od-ode08-19-t500-hw-56s1#display mac-address vlan 602 
+Перегляд логів 
+od-ode08-19-t500-hw-56s1#display alarm active all 
+Інколи display alarm history all 
+
+FTTB RAISECOM – в назві обладнання є -f- 
+Перегляд інформації по всіх портах. 
+ck-zvenygor-shevch28-f-rc2s1#show interface brief 
+Перегляд МАС-адреси по порту 
+ck-zvenygor-shevch28-f-rc2s1#show mac-address dynamic gigaethernet 1/1/23 
+Перегляд МАС-адреси по vlan 
+ck-zvenygor-shevch28-f-rc2s1#show mac-address dynamic vlan 602 
+Перегляд логів 
+ck-zvenygor-shevch28-f-rc2s1#show logging history 
+ck-zvenygor-shevch28-f-rc2s1#show logging buffer 
+ck-zvenygor-shevch28-f-rc2s1#show logging buffer | include 1/1/23 
+ko-romankiv-sondol-f-rc4s5#show alarm log | include 1/18 
+Перегляд оптичних показників порту 
+ck-zvenygor-shevch28-f-rc2s1#show transceiver ddm gigaethernet 1/1/28 
+Перегляд історії помилок оптичних показників 
+ck-zvenygor-shevch28-f-rc2s1#show transceiver ddm alarm history 
+
+D-LINK 
+Перегляд інформації по портам 
+mk-pervomaj-d3s1:admin#show ports 
+Примітка. Якщо порт піднятий, то у колонці буде 1000/full/none. У разі падіння порту Link Down. 
+Перегляд мак-адреси. 
+mk-pervomaj-d3s1:admin#show fdb  port 2 
+mk-pervomaj-d3s1:admin#show fdb vlanid 604 
+Перегляд логів 
+mk-pervomaj-d3s1:admin#show log 
+Перегляд оптичних показників 
+mk-pervomaj-d3s1:admin#show ddm ports status 
+
+
+57.128.20.119
+
+
+
+
+BDCOM 
+Необхідно увімкнути Enable-режим. 
+zt-krasnobirka-druzhby1-bd1s1>enable 
+Перегляд всіх портів. 
+zt-krasnobirka-druzhby1-bd1s1#show interface brief 
+hm-zakupne-bd1s1#show interface ePON 0/4:42 
+Перегляд МАС-адрес по назві порту 
+zt-krasnobirka-druzhby1-bd1s1#show mac address-table interface epoN 0/2:32 
+Перегляд МАС-адрес по VLAN 
+zt-krasnobirka-druzhby1-bd1s1#show mac address-table vlan 604 
+Перегляд логів 
+zt-krasnobirka-druzhby1-bd1s1#show logging 
+Використовуючи фільтр 
+zt-krasnobirka-druzhby1-bd1s1#show logging | include EPON0/1:5 
+
+ZTE 
+ko-romankiv-sondol-f-zt5s1>show port ½ 
+Примітка. Також отримуємо оптичні показники. 
+Перегляд МАС-адрес. 
+ko-romankiv-sondol-f-zt5s1>show mac dynamic port 1/2 
+ko-romankiv-sondol-f-zt5s1>show mac dynamic vlan 602 
+Перегляд логів. 
+ko-romankiv-sondol-f-zt5s1>show terminal log 
+
+ 
+
+PON ZTE 
+Перегляд портів. 
+rv-mickevycha2-ats26-pon-zt7s1#show pon onu information gpon_olt-1/1/15 
+rv-mickevycha2-ats26-pon-zt7s1#show pon onu information gpon_olt-1/3/3 
+	Примітка. 1/1 або 1/3 прописуємо та 15 або 3 підставляємо згідно інформації в АРМ УС. 
+		Якщо в графі State working – порт піднятий, Los – впав по фізиці, DyingGasp – «Доживає останнє», працює, але йому погано. 
+Якщо необхідно переглянути МАС-адресу на порті. (переглядаємо на всіх портах) 
+rv-mickevycha2-ats26-pon-zt7s1# show mac dynamic 
+Перегляд маків по влану
+show mac vlan xxx
+Перегляд логів. 
+rv-mickevycha2-ats26-pon-zt7s1#show logging alarm 
+Перегляд аптайм обладнання
+Show software 
+
+PON RAISECOM – в назві обладнання є -pon- 
+Необхідно зайти в режим Enable. 
+cg-olysh-cherngv29-pon-rc5s1>enable 
+Перегляд інформації по всім портам 
+cg-olysh-cherngv29-pon-rc5s1#show interface gpon-onu online-information 
+hr-zolochiv-centr27a-pon-rc5s1#show gpon-onu 1/1/4 uni eth info 
+Перегляд МАС-адреси на порті 
+cg-olysh-cherngv29-pon-rc5s1#show mac-address-table l2-address interface gpon-onu 1/1/10 
+cg-olysh-cherngv29-pon-rc5s1#show mac-address-table l2-address vlan 602 
+Перегляд логів 
+cg-olysh-cherngv29-pon-rc5s1#show logging history | include x/x/x 
+Перегляд оптичних показників 
+cg-olysh-cherngv29-pon-rc5s1#show transceiver [ddm gigaEthernte 1/1/0] 
+show interface gpon-olt transceiver rx-onu-power  
+show gpon-onu 1/2/113 transceiver 
+
+Iskratel (mban - SI2000)
+Отримання інформації про порт. 
+mBAN> show dsl port 18 
+Примітка. Піднятий чи лежить порт Operational State (Up/Down). 
+Перегляд МАС-адрес на порті. 
+mBAN> show bridge mactable interface dsl5:1_33 
+mBAN> show bridge mactable interface dsl5:1_40 
+Примітка. Додати коли 1_33 або 1_40 для DHCP та PPPoE (вказується в АРМУС). Може бути лише в одному з них, в разі відсутності в обох командах – МАС-адреса відсутня. 
+Переглянути логи на обладнанні. 
+mBAN> show alarm 
+
+Iskratel (SI3000)
+Перегляд інформації по інтерфейсу
+show port all
+show port 0/12/1
+Перегляд статистики по порту
+show interface 0/12/1
+Перегляд мак адреси по влану
+show mac-addr-table vlan 604
+Перегляд мак адреси по порту
+show mac-addr-table interface 0/12/1
+Перегляд логів 
+dc-svyatogirsk-maz54-pon-ik1s1#show logging file MsgErr 
+
+PON ISkratel 
+rv-zdolbun-grush15-pon-ik1s2#show port all 
+Якщо нам потрібно перевірити х/y/z, то спочатку перевіряємо x/y аби були в Up. Якщо Down – нема сенсу далі перевіряти. 
+rv-zdolbun-grush15-pon-ik1s2#show port 0/6/2 
+Переглядаємо МАС-адрес на порту. 
+rv-zdolbun-grush15-pon-ik1s2#show mac-addr-table interface 0/6/35 
+Переглядаємо інформацію по пристрою(час роботи). 
+rv-zdolbun-grush15-pon-ik1s2#show sysinfo 
+Перегляд логів
+dc-svyatogirsk-maz54-pon-ik1s1#show logging file MsgErr 
