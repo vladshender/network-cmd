@@ -96,7 +96,7 @@ rv-zdolbun-grush15-pon-ik1s2#show sysinfo
 dc-svyatogirsk-maz54-pon-ik1s1#show logging file MsgErr 
 
 
-
+---
 <details>
   <summary> HW-56 - доступ </summary>
 
