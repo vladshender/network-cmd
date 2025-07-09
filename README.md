@@ -1,18 +1,27 @@
 # commands
 
-[Core](/core.md)
-
-[Access](/access.md)
+|  C O R E  |           | A C C E S S |
+| :-------- | :-------- | :---------- |
+|                || [BDCOM](BDCOM.md) |
 
 
 ✔️ ✅ ❌ ⚠️ ℹ️ ❓ 
 
 <details>
-  <summary> DONE </summary>
+  <summary> C O R E </summary>
 
-| Project                                       | Wallet              | Notes     |      |
+| EQP                                           | Wallet              | Notes     |      |
 | :--------                                     | :--------           | :-------- | :--- |
 |                                               |                     |       
+
+</details>
+
+<details>
+  <summary> A C C E S S </summary>
+
+| EQP                                           | Wallet              | Notes     |      |
+| :--------                                     | :--------           | :-------- | :--- |
+|  [BDCOM](BDCOM.md)                                             |                     |       
 
 </details>
 
