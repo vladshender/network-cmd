@@ -1,7 +1,7 @@
 ## PON RAISECOM – в назві обладнання є -pon- 
 
 #### Необхідно зайти в режим Enable. 
-cg-olysh-cherngv29-pon-rc5s1>enable 
+`cg-olysh-cherngv29-pon-rc5s1>enable `
 
 #### Перегляд інформації по всім портам 
 `cg-olysh-cherngv29-pon-rc5s1#show interface gpon-onu online-information `
