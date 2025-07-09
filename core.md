@@ -21,6 +21,7 @@ show interfaces ae(1,2,3) extensive
 show interfaces diagnostics optics xe-1/2/3
 
 
+show logging messages
 
 ================================================================================================================
 
