@@ -2,7 +2,7 @@
 
 |  C O R E  |           | A C C E S S |
 | :-------- | :-------- | :---------- |
-|                                     || [BDCOM](BDCOM.md) |
+| [Juniper](Juniper.md)               || [BDCOM](BDCOM.md) |
 |                                     || [RAISECOM FTTB](FTTB_RAISECOM.md) |
 |                                     || [ZTE](ZTE) |
 |                                     || [D-LINK](D-LINK) |
