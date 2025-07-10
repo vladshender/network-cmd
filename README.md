@@ -11,14 +11,8 @@
     ℹ️ Рекомендована перевірка абонентського обладнання та останньої милі.
 ###
 
-
-| EQP                                           | Wallet              | Notes     |      |
-| :--------                                     | :--------           | :-------- | :--- |
-|                                               |                     |       
-
-</details>
-
-
+<details>
+  <summary> C O M M A N D S </summary>
 
 |  C O R E  |           | A C C E S S | S C E N A R I O |
 | :-------- | :-------- | :---------- | :---------- |
@@ -35,15 +29,6 @@
 |                                     ||| [l2vpn](l2vpn.md) 
 |                                     |||
 
-
+</details>
 
 ✔️ ✅ ❌ ⚠️ ℹ️ ❓ 
-
-<details>]
-  <summary> C O R E </summary>
-
-| EQP                                           | Wallet              | Notes     |      |
-| :--------                                     | :--------           | :-------- | :--- |
-|                                               |                     |       
-
-</details>
