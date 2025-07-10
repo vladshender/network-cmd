@@ -1,11 +1,10 @@
 # commands
-<details>]
-  <summary> Notes </summary>
-##
+
+###
     Стан абон порту - DOWN
 
     Рекомендована перевірка абонентського обладнання та останньої милі.
-##
+###
 
 
 | EQP                                           | Wallet              | Notes     |      |
