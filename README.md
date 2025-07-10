@@ -1,4 +1,4 @@
-# commands
+# commands ✔️ ✅ ❌ ⚠️ ℹ️ ❓ 
 
 ###
     ✔️ Стан абонентського порту - UP
@@ -19,7 +19,8 @@
 
 |  C O R E  |           | A C C E S S | S C E N A R I O |
 | :-------- | :-------- | :---------- | :---------- |
-| [Juniper-mx](Juniper-mx.md)               || [BDCOM](BDCOM.md) |
+| [Juniper-mx](Juniper-mx.md)         || [Huawei-56](Huawei-56.md) |
+|                                     || [BDCOM](BDCOM.md) |
 |                                     || [RAISECOM FTTB](FTTB_RAISECOM.md) |
 |                                     || [ZTE](ZTE) |
 |                                     || [D-LINK](D-LINK) |
@@ -34,4 +35,4 @@
 
 </details>
 
-✔️ ✅ ❌ ⚠️ ℹ️ ❓ 
+
