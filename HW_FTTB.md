@@ -18,3 +18,9 @@
 
 ####
     ping 82.207.105.88 rapid count 1000
+####
+    show subscribers | match 82.207.105.88 
+
+demux0.3221533785               82.207.105.88                           cg-ivanafranka4a-f-hw1s1 eth 0/0/5:.BC620E4CB797       default:default      
+
+    monitor interface demux0.3221533785
