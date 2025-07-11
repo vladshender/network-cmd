@@ -34,3 +34,7 @@ VID  Status  Property      MAC-LRN Statistics Description
 --------------------------------------------------------------------------------
 1044 enable  default       enable  disable    VLAN 1044                         
 ```
+
+106 downstream
+126 - upstream
+127 - upstream ( see in if description )
