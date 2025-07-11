@@ -8,3 +8,29 @@ Originator ID: `195.5.8.28`
 Next hop: `via` irb.`7240`, selected
 
     show configuration | display set | match 7240
+
+set interfaces ae0 unit 7240 vlan-tags outer 1044
+set interfaces ae0 unit 7240 vlan-tags inner 606
+set interfaces irb unit 7240 description "Configured for customer AKCIONERNE TOVARICTVO _UKRTRANCGAZ_ SID (ukrtransgaz_opory@ethernet.atutg.ua)"
+
+
+#### on CSS0
+
+<lv-HW-S9312-CSS0>
+    display vlan 1044
+
+```    
+--------------------------------------------------------------------------------
+U: Up;         D: Down;         TG: Tagged;         UT: Untagged;
+MP: Vlan-mapping;               ST: Vlan-stacking;
+#: ProtocolTransparent-vlan;    *: Management-vlan;
+--------------------------------------------------------------------------------
+
+VID  Type    Ports                                                          
+--------------------------------------------------------------------------------
+1044 common  TG:Eth-Trunk106(U) Eth-Trunk126(U) Eth-Trunk127(U)                 
+
+VID  Status  Property      MAC-LRN Statistics Description      
+--------------------------------------------------------------------------------
+1044 enable  default       enable  disable    VLAN 1044                         
+```
