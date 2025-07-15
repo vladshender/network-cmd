@@ -1,7 +1,7 @@
 ### FTTB RAISECOM – в назві обладнання є -f-  ck-zvenygor-shevch28-f-rc2s1 </summary>
 
 ##### перегляд інтерфейсів
-    show interface brief ||Перегляд інформації по всіх портах. ||
+    show interface brief
 ##### Перегляд МАС-адреси по порту
     show mac-address dynamic gigaethernet 1/1/23
 ##### Перегляд МАС-адреси по vlan
