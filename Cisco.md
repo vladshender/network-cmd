@@ -1,6 +1,11 @@
+
+
 ## Cisco
 ####
     show interface
+
+<!--@include:_ReportNotes.md-->
+
 #### 
     show mac address-table interface
 #### 
