@@ -1,6 +1,6 @@
 ## CSS
 
-L2vpn, L3vpn, profi mac дивитися по vlan !
+⚠️L2vpn, L3vpn, profi mac дивитися по vlan !
 
   display interface GigabitEthernet 1/1/0/22
   
