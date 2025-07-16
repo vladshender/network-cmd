@@ -6,8 +6,9 @@
 #### Перегляд інформації по всім портам 
 `cg-olysh-cherngv29-pon-rc5s1#show interface gpon-onu online-information `
 
+####  link RS - ONU
     show interface gpon-onu online-information
-####
+####  ONU  -- Subsc
     show gpon-onu 1/1/4 uni eth info 
 #### Перегляд МАС-адреси на порті 
     show mac-address-table l2-address interface gpon-onu 1/1/10 
