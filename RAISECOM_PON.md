@@ -22,3 +22,13 @@
     show interface gpon-olt transceiver rx-onu-power  
 ####
     show gpon-onu 1/2/113 transceiver 
+
+#### reboot port
+'''
+ug-mukach-franka69-pon-rc5s1#config
+Configuration mode, one command input per times. End with CTRL-Z.
+CONFIG-I:Configured from telnet ...
+ug-mukach-franka69-pon-rc5s1(config)#gpon-onu 1/1/7
+ug-mukach-franka69-pon-rc5s1(config-gpon-onu-1/1:7)#reboot now
+Reboot ONU 7 ...
+'''
