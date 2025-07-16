@@ -5,7 +5,7 @@
 | Command                                       |               | Notes     |      |
 | :--------                                     | :--------     | :-------- | :--- |
 |                              | Стан інтерфейсів   ||
-| show ports || 1000/full/none LinkDown ||
+| ```show ports``` || 1000/full/none LinkDown ||
 |                              | МАС-адреси         ||
 | show fdb  port 2                ||Перегляд МАС-адреси по порту ||
 | show fdb vlanid 604             ||Перегляд МАС-адреси по vlan  ||
