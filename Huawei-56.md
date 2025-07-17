@@ -11,8 +11,8 @@
     mac-address port 0/11/1 ont 11
 #### Відібрати по vlan
     display mac-address vlan 602 
-### Перегляд логів
+#### Перегляд логів
     display alarm history all
     display alarm active all
 
----
+#### reboot port
