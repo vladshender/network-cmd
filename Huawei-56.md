@@ -13,6 +13,7 @@
     display mac-address vlan 602 
 #### Перегляд логів
     display alarm history all
+#####
     display alarm active all
 
 #### reboot port
