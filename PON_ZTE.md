@@ -26,3 +26,6 @@
 #####
     show pon power attenuation gpon_onu-1/3/1:6 
 
+##### логи по інтерфейсу
+    show pon onu information gpon_onu-1/3/1:1
+
