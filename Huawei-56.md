@@ -7,12 +7,15 @@
 ### перегляд МАС-адреси
     enable
     display mac-address port 0/11/1
-#### Відібрати по ONT
+##### Відібрати по ONT
     mac-address port 0/11/1 ont 11
-#### Відібрати по vlan
+##### Відібрати по vlan
     display mac-address vlan 602 
 #### Перегляд логів
     display alarm history all
+#####
+    display alarm history alarmparameter 0/20/0
+    
 #####
     display alarm active all
 
