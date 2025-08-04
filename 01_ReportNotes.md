@@ -35,3 +35,58 @@
  
  
 Дата початку та кінця подій додаються в примітку до події*
+
+
+
+
+
+
+###
+```
+За минулий тиждень спостерігаються ЧКС (часті, короткочасні падіння обладнання з самовідновленням):
+lv-brody-rynok15-pon-ik1s1  :: 10.168.129.41
+Загальна кількість спрацювань:  10
+
+
+Аптайм обладнання
+
+
+System Up Time...........1 days 20 hrs 23 mins 52 secs
+Last Reset...............Sat Aug  2 16:23:35 2025
+
+
+Shelf та ПЗ встановлені вірно
+
+lv-brody-rynok15-pon-ik1s1#sh shelf-id 
+Shelf ID................."lv-brody-rynok15-pon-ik1s1".
+
+
+Num  Name                  Status
+-------------------------------------------
+1    AN6520GP_2.6.3.0.156  Current Active
+2    AN6520GP_2.6.3.0.156  Backup
+
+
+Точка включення  10.171.12.12  lv-brody-HW-S9312-dsag0     GigabitEthernet 1/0/28
+
+Description:_Lumia_lv-brody-rynok-pon-ik1s1_10.168.129.41
+
+Last physical up time   : 2025-08-02 16:26:03 UTC+02:00 DST
+Last physical down time : 2025-08-02 16:22:15 UTC+02:00 DST
+
+
+Аптайм 
+
+ uptime is 41 weeks, 6 days, 10 hours, 43 minutes
+
+
+
+В логах наявні падіння точки включення по фізиці, що підтверджують перезавантаження обладнання
+Логи додаються окремо в примітку до події*
+
+
+#Aug  2 2025 16:26:03+03:00 DST lv-brody-HW-S9312-dsag0 IFNET/1/IF_LINKUP:OID 1.3.6.1.6.3.1.1.5.4 Interface 38 turned into UP state.(AdminStatus=1,OperStatus=1,InterfaceName=GigabitEthernet1/0/28)
+#Aug  2 2025 16:22:15+03:00 DST lv-brody-HW-S9312-dsag0 IFNET/1/IF_LINKDOWN:OID 1.3.6.1.6.3.1.1.5.3 Interface 38 turned into DOWN state.(AdminStatus=1,OperStatus=2,InterfaceName=GigabitEthernet1/0/28)
+
+```
+
