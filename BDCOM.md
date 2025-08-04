@@ -15,3 +15,4 @@
     show logging
     show logging \| include EPON0/1:5
 ##### оптичні показникі
+    show epon optical-transceiver-diagnosis interface epon0/1 
