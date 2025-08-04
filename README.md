@@ -2,9 +2,9 @@
 
 |           |           |             |             |
 | :-------- | :-------- | :---------- | :---------- |
-|           |           |             | [Huawei-56](Huawei-56.md)            |
-|           |           |             | []()]            |
-|           |           |             |             |
+|           |           |             | [Huawei-56](Huawei-56.md)              |
+|           |           |             | [Huawei_DistAgg.md](Huawei_DistAgg.md) |
+|           |           |             | [Huawei FTTB](Huawei_FTTB.md)          |
 |           |           |             |             |
 
 
