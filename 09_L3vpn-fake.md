@@ -8,7 +8,7 @@ Originator ID: `195.5.8.28`
     show route table l3vpn-atutg.ua.inet 172.19.50.45 extensive | match irb
 Next hop: `via` irb.`7240`, selected
 
-    show configuration | display set | match 7240
+    show configuration | display set | match 
 
 set interfaces ae0 unit 7240 vlan-tags outer 1044
 set interfaces ae0 unit 7240 vlan-tags inner 606
@@ -46,7 +46,7 @@ VID  Status  Property      MAC-LRN Statistics Description
 ## on Juniper
 
 #### MAC абонента
-    show bridge mac-table interface ae0.7240
+    show bridge mac-table interface ae0.
 
 #### пинг абонента
     ping routing-instance l3vpn-atutg.ua 172.19.50.45 rapid count 1000 
@@ -55,7 +55,7 @@ VID  Status  Property      MAC-LRN Statistics Description
     ping routing-instance dslam-control 192.168.44.226 rapid count 1000
 
 #### трафік на інтерфейсі
-    monitor interface ae0.7093 
+    monitor interface ae0.
 
 
 
