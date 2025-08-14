@@ -4,7 +4,7 @@
 
 `rv-mickevycha2-ats26-pon-zt7s1# show pon onu information gpon_olt-1/1/15`
 
-    show pon onu information gpon_olt- 
+    show pon onu information gpon_olt-
 
 > [!NOTE]  
 > Примітка. 1/1 або 1/3 прописуємо та 15 або 3 підставляємо згідно інформації в АРМ УС. \
