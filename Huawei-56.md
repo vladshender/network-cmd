@@ -20,3 +20,4 @@
     display alarm active all
 
 #### reboot port
+через систему управління
