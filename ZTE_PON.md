@@ -29,3 +29,13 @@
 ##### логи по інтерфейсу
     show pon onu information gpon_onu-1/3/1:1
 
+
+#####
+     show ip dhcp snooping dynamic database
+#####
+     show ip dhcp snooping dynamic ip
+#####
+     show ip dhcp snooping dynamic port
+#####
+
+     
