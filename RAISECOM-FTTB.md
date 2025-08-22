@@ -9,8 +9,8 @@
 ##### Перегляд логів
     show logging history 
     show logging buffer 
-    show logging buffer \| include 1/1/23 
-    show alarm log \| include 1/18 
+    show logging buffer | include 1/1/23 
+    show alarm log | include 1/18 
 ##### Перегляд оптичних показників порту
     show transceiver ddm gigaethernet 1/1/28 
 ##### Перегляд історії помилок оптичних показників
