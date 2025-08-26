@@ -10,3 +10,5 @@
     show fdb vlan 602
 ### логи
     show terminal log 
+###
+    show date-time
