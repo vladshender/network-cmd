@@ -16,7 +16,12 @@
 | show alarm log \| include 1/18 
 |                              | оптичні показникі  ||
 | show ddm ports status 
+| show ddm ports configuration
+
 
 </details>
 
 ---
+##### оптичні показникі
+    show ddm ports status 
+    show ddm ports configuration
