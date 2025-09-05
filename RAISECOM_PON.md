@@ -28,7 +28,10 @@
 ug-mukach-franka69-pon-rc5s1#config
 Configuration mode, one command input per times. End with CTRL-Z.
 CONFIG-I:Configured from telnet ...
+####
 ug-mukach-franka69-pon-rc5s1(config)#gpon-onu 1/1/7
+####
 ug-mukach-franka69-pon-rc5s1(config-gpon-onu-1/1:7)#reboot now
+###
 Reboot ONU 7 ...
 '''
