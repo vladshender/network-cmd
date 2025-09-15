@@ -12,6 +12,7 @@
 
 <hr-sakhanovshina-hw1s1>display current-configuration interface Ethernet 0/0/1
 #
+```
 interface Ethernet0/0/1
  description 3211_Oschadbank_l3vpn
  port hybrid pvid vlan 3211
@@ -24,6 +25,7 @@ interface Ethernet0/0/1
  port-security aging-time 6
  port-isolate enable group 1
  broadcast-suppression 1
+```
 #
 r
 
