@@ -1,4 +1,6 @@
 ## Huawei
+    display version
+
 
 ##### Перегляд інформації по інтерфейсам (фізичні та логічні)
     display interface description
