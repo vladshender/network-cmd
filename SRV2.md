@@ -1,6 +1,7 @@
 ## Services
 
-### Діагностичні команди для перевірки послуги @prof.ukrtel.net
+<details>
+  <summary> Діагностичні команди для перевірки послуги <b> @prof.ukrtel.net </b> </summary>
 
 #### Пошук irb абонента
     show route [ip_address] | match irb
@@ -18,7 +19,15 @@
 
 #### Переглянути трафік від абонента [додаємо до ae0.irb]
     monitor interface ae0.
+</details>
 
+------------
+
+
+<details>
+  <summary> C O M M A N D S </summary>
+
+</details>
 
 ### Діагностичні команди для перевірки послуги @ethernet.vrf
 #### Пошук irb абонента
