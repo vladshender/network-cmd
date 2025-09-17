@@ -54,3 +54,11 @@
 Нам поверне результат demux.123456, копіюємо його
 ####
 	  monitor interface [demux.123456]
+
+
+##### Полісери- лічильники відкинутих фільтрами пакетів
+    show firewall filter irb.3111-i
+######
+    show policer plcr-2m-irb.3111-inet-o
+######
+
