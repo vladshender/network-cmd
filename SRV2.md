@@ -1,7 +1,7 @@
 ## Services
 
 <details>
-  <summary> Діагностичні команди для перевірки послуги <b> @prof.ukrtel.net </b> </summary>
+  <summary>Діагностичні команди для перевірки послуги <b>@prof.ukrtel.net</b> </summary>
 
 #### Пошук irb абонента
     show route [ip_address] | match irb
@@ -23,13 +23,9 @@
 
 ------------
 
-
 <details>
-  <summary> C O M M A N D S </summary>
+  <summary> Діагностичні команди для перевірки послуги <b>@ethernet.vrf</b> </summary>
 
-</details>
-
-### Діагностичні команди для перевірки послуги @ethernet.vrf
 #### Пошук irb абонента
     show route table l3vpn-[vrf-абонента] [ip_address] | match irb
 Має видати результат без приставки "to", в такому випадку, якщо видає "to" - то абонент термінується не на цьому РЕ
@@ -47,6 +43,11 @@
 
 #### Переглянути трафік від абонента
     monitor interface ae0.[цифри з irb абонента]
+
+</details>
+
+------------
+
 
 ### Сесійні послуги (@gpon.ukrtel.net, @fttb.ukrtel.net, @dsl.ukrtel.net)
 #### Перегляд інформації по сесії абонента
