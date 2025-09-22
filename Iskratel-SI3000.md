@@ -1,8 +1,13 @@
 # Iskratel (SI3000)
+######
+    shov version
+######
     show sysinfo
 ######
     show shelf-id
-#####
+######
+    show boot packages
+
     
 ##### Перегляд інформації по інтерфейсу
     show port all
