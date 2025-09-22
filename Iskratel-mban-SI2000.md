@@ -1,4 +1,7 @@
 ### Iskratel (mban - SI2000)
+    show system info
+    show shelf
+    show shelf-id
 #### Отримання інформації про порт. 
      show dsl port 18 
 Примітка. Піднятий чи лежить порт Operational State (Up/Down). 
