@@ -36,7 +36,7 @@
      show ip dhcp snooping dynamic ip
 #######
      show ip dhcp snooping dynamic port
-#######
+####### configure terminal
      mac delete dynamic interface vport-1/3/7.3:1
 #######
      ip dhcp snooping clear interface vport-1/3/7.3:1 CA21.72EB.58BC vlan 1300
