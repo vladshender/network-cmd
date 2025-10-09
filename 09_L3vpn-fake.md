@@ -9,10 +9,10 @@ Originator ID: `195.5.8.28`
 Next hop: `via` irb.`7240`, selected
 
     show configuration | display set | match 
-
-set interfaces ae0 unit 7240 vlan-tags outer 1044
-set interfaces ae0 unit 7240 vlan-tags inner 606
-set interfaces irb unit 7240 description "Configured for customer AKCIONERNE TOVARICTVO _UKRTRANCGAZ_ SID (ukrtransgaz_opory@ethernet.atutg.ua)"
+#### output
+    set interfaces ae0 unit 7240 vlan-tags outer 1044
+    set interfaces ae0 unit 7240 vlan-tags inner 606
+    set interfaces irb unit 7240 description "Configured for customer AKCIONERNE TOVARICTVO _UKRTRANCGAZ_ SID (ukrtransgaz_opory@ethernet.atutg.ua)"
 
 
 ## on CSS0
