@@ -8,6 +8,8 @@
 #### 
     show mac address-table vlan
 #### 
+    show vlan id 3301
+#### 
     show logging
 #### 
     show version (uptime)
