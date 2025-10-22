@@ -21,4 +21,8 @@
 #### dc-svyatogirsk-maz54-pon-ik1s1# show logging file MsgErr
 
     show logging file MsgErr 
+
+#### reset port
+    clear ipsg interface 0/5/33/2
     
+    show dhcpsnooping interface 0/5/33
