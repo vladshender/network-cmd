@@ -8,11 +8,11 @@
 
 #### rv-zdolbun-grush15-pon-ik1s2# show port 0/6/2
 
-    show port 0/6/2 
+    show port 
 Переглядаємо МАС-адрес на порту. 
 #### rv-zdolbun-grush15-pon-ik1s2# show mac-addr-table interface 0/6/35
 
-    show mac-addr-table interface 0/6/35 
+    show mac-addr-table interface 
 Переглядаємо інформацію по пристрою(час роботи). 
 #### rv-zdolbun-grush15-pon-ik1s2# show sysinfo
 
