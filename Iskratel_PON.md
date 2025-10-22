@@ -24,5 +24,5 @@
 
 #### reset port
     clear ipsg interface 0/5/33/2
-    
+#####    
     show dhcpsnooping interface 0/5/33
