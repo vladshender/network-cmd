@@ -6,6 +6,7 @@
 
 ### перегляд МАС-адреси
     enable
+#####    
     display mac-address port 0/11/1
 ##### Відібрати по ONT
     mac-address port 0/11/1 ont 11
