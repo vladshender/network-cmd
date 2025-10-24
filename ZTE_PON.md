@@ -4,6 +4,9 @@
 
 `rv-mickevycha2-ats26-pon-zt7s1# show pon onu information gpon_olt-1/1/15`
 
+#####
+    show pon onu information 
+#####
     show pon onu information gpon_olt-
 
 > [!NOTE]  
