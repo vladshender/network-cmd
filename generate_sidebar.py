@@ -4,7 +4,7 @@ def generate_sidebar(base_dir='.'):
     sidebar_lines = ["* [🏠 Головна](/README.md)\n"]
 
     for root, dirs, files in os.walk(base_dir):
-        # Пропускаємо приховані папки та .github
+        # Пропускаємо приховані папки та службові директорії
         if root.startswith('./.') or root.startswith('.git'):
             continue
 
@@ -19,6 +19,7 @@ def generate_sidebar(base_dir='.'):
         for file in sorted(files):
             if file.endswith('.md'):
                 file_path = os.path.join(root, file).replace('\\', '/')
+                file_path = file_path.replace('./', '')  # 🔥 ось ключова зміна
                 display_name = os.path.splitext(file)[0]
                 sidebar_lines.append(f"{indent}  * [{display_name}]({file_path})\n")
 
