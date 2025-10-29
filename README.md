@@ -130,10 +130,10 @@ Last physical down time : 2025-08-02 16:22:15 UTC+02:00 DST
 |  C O R E  |           | A C C E S S | S C E N A R I O |
 | :-------- | :-------- | :---------- | :---------- |
 | [Juniper-mx](Juniper-mx.md)         || [Huawei-56](Huawei-56.md) |
-|                                     || [BDCOM](BDCOM.md) |
+|                                     || [BDCOM](Команди/Обладнання доступу/BDCOM.md) |
 |                                     || [RAISECOM FTTB](FTTB_RAISECOM.md) |
 |                                     || [ZTE](ZTE) |
-|                                     || [D-LINK](D-LINK) |
+|                                     || [D-LINK](Команди/Обладнання доступу/D-LINK.md) |
 |                                     || [Iskratel mban SI2000](Iskratel-mban-SI2000.md)|
 |                                     || [Iskratel SI3000](Iskratel-SI3000.md)|
 |                                     || [PON ISkratel](PON-ISkratel.md)|

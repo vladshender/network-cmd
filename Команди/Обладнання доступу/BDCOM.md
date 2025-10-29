@@ -23,7 +23,12 @@
     show version
 ##### Подивитись конфігурацію
     show running-config
+##### Знайти DHCP сесію абонента на обладнанні  
+    show ip dhcp-relay snooping binding all | include mac абонента 
+##### Очистити DHCP сесію абонента на обладнанні 
+    clear dhcp-relay snooping binding mac...чи...ip ip або mac абонента
 ##### Додати необхідний влан на порт ONU
     configure
     interface EPON 0/1:1
     epon onu port 1 ctc vlan mode tag 1414
+
