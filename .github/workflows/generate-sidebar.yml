@@ -1,0 +1,29 @@
+name: Generate Sidebar
+
+on:
+  push:
+    branches:
+      - main  # або інша твоя основна гілка
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate sidebar
+        run: python generate_sidebar.py
+
+      - name: Commit and push sidebar
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add _sidebar.md
+          git commit -m "Auto-update sidebar" || echo "No changes to commit"
+          git push
