@@ -19,3 +19,9 @@
     show env all    
 ##### Перевірити на яких портах є влан
     show vlan id 3301
+##### Вимнкути\увімкнути порт
+    configure terminal
+    inteface Gi1/21
+    shutdown
+    no shutdown
+
