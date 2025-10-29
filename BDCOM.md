@@ -1,5 +1,5 @@
 ### BDCOM  
-##### Щоб увійти в конфігурацій режим
+##### Щоб увійти в привілегійовий режим
     enable
 ##### Стан всіх інтерфейсів
     show interface brief
@@ -9,11 +9,21 @@
     show mac address-table interface epoN 0/2:32
 ##### Перегляд МАС-адреси по vlan
     show mac address-table vlan 604                    
-##### логи
+##### Подивитись логи по ONU
     show logging | include EPON0/4:11
-##### оптичні показникі
-    show epon optical-transceiver-diagnosis interface EPON0/1:4
-##### Uptime обладнання та current time
+##### Подивитись оптичні показники по портам
+    show epon optical-transceiver-diagnosis 
+##### Подивитись оптичні показники по ONU
+    show epon inteface epon 0/3:1 onu ctc optical-transceiver-diagnosis
+    ----
+    show epon optical-transceiver-diagnosis interface EPON0/1:4   
+##### Перезавантажити ONU\OLT 
+    epon reboot onu\olt interface EPON 0/1:1
+##### Перевірити Uptime обладнання та current time
     show version
 ##### Подивитись конфігурацію
     show running-config
+##### Додати необхідний влан на порт ONU
+    configure
+    interface EPON 0/1:1
+    epon onu port 1 ctc vlan mode tag 1414
