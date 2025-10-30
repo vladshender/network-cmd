@@ -4,21 +4,41 @@
   <meta charset="UTF-8">
   <title>Network Docs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Тема Docsify -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <style>
+    /* 🔹 Трохи стилю для кращого вигляду */
+    .sidebar-nav ul ul {
+      padding-left: 1em;
+    }
+    .sidebar-nav .folder {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
   <div id="app">Loading...</div>
 
   <script>
-      window.$docsify = {
-        name: 'Network Docs',
-        repo: 'vladshender/network-cmd',
-        loadSidebar: true,
-        subMaxLevel: 2,
-        homepage: 'README.md'
-      };
+    window.$docsify = {
+      name: 'Network Docs',
+      repo: 'vladshender/network-cmd',
+
+      loadSidebar: true,
+      subMaxLevel: 0,          // ❌ не генерує підзаголовки автоматично
+      sidebarDisplayLevel: 1,  // 🔹 показує тільки перший рівень відкритим
+      homepage: 'README.md',
+    };
   </script>
 
+  <!-- Основний Docsify -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- 🔹 Плагін для згортаємого sidebar -->
+  <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
