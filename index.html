@@ -8,13 +8,34 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
   <style>
-    /* Трохи стилів для sidebar */
+    /* базові стилі */
     .sidebar-nav ul ul {
       padding-left: 1em;
     }
-    .sidebar-nav .folder {
-      font-weight: bold;
+
+    /* наші класи для керування станом */
+    .docsify-folder-header {
+      display: inline-block;
+      width: calc(100% - 1.2em);
       cursor: pointer;
+      user-select: none;
+    }
+
+    .docsify-toggle-icon {
+      display: inline-block;
+      width: 1.2em;
+      text-align: center;
+      margin-right: 0.2em;
+    }
+
+    /* коли згорнуто — ховаємо підсписок */
+    .docsify-collapsed > ul {
+      display: none;
+    }
+
+    /* деяка візуальна підказка */
+    .docsify-folder-header:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -27,50 +48,198 @@
       name: 'Network Docs',
       repo: 'vladshender/network-cmd',
       loadSidebar: true,
-      subMaxLevel: 0,
-      homepage: 'README.md',
-
-      // 🔹 Додаткові параметри для стабільного згортання
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      },
+      subMaxLevel: 0,          // не генеруємо підзаголовки автоматично
       sidebarDisplayLevel: 1,
-      auto2top: true,
+      homepage: 'README.md'
     };
   </script>
 
-  <!-- Docsify core -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-
-  <!-- 🔹 Плагін згортання sidebar (оновлений варіант) -->
   <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
-  <!-- 🔹 Плагін для збереження стану sidebar між переходами -->
   <script>
     (function () {
-      let lastActive;
+      const STORAGE_KEY = 'docsify_sidebar_state_v1';
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const sidebar = document.querySelector('.sidebar-nav');
-        if (sidebar) {
-          sidebar.addEventListener('click', (e) => {
-            if (e.target && e.target.tagName === 'A') {
-              lastActive = e.target.getAttribute('href');
-              sessionStorage.setItem('lastActiveLink', lastActive);
+      // helper: sanitize id for storage
+      function idFromText(text) {
+        return text.trim().replace(/\s+/g, '_').replace(/[^\w\-]/g, '').toLowerCase();
+      }
+
+      // find sidebar root
+      function getSidebarRoot() {
+        return document.querySelector('.sidebar-nav');
+      }
+
+      // read state
+      function loadState() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        } catch (e) {
+          return [];
+        }
+      }
+      function saveState(arr) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+        } catch (e) {}
+      }
+
+      // toggle id in persisted state
+      function setOpen(id, open) {
+        const state = new Set(loadState());
+        if (open) state.add(id); else state.delete(id);
+        saveState([...state]);
+      }
+      function isOpen(id) {
+        return loadState().includes(id);
+      }
+
+      // main init function: converts li>ul into collapsible folders and restores state
+      function initSidebar() {
+        const root = getSidebarRoot();
+        if (!root) return;
+
+        // select all li elements that contain a nested ul (i.e., folders)
+        const folderNodes = root.querySelectorAll('li');
+        folderNodes.forEach(li => {
+          const childUl = li.querySelector(':scope > ul');
+          if (!childUl) return; // not a folder
+
+          // ensure we only initialize once per li
+          if (li.dataset.docsifyFolder === 'true') return;
+          li.dataset.docsifyFolder = 'true';
+
+          // determine header text (either direct anchor or text node)
+          // gather direct children except the nested ul
+          const directChildren = Array.from(li.childNodes).filter(n => n !== childUl);
+          // create header wrapper
+          const header = document.createElement('span');
+          header.className = 'docsify-folder-header';
+
+          // move direct children into header
+          directChildren.forEach(node => header.appendChild(node));
+
+          // create toggle icon
+          const toggle = document.createElement('span');
+          toggle.className = 'docsify-toggle-icon';
+          toggle.textContent = '▸'; // collapsed arrow
+          header.insertBefore(toggle, header.firstChild);
+
+          // insert header at the top of li
+          li.insertBefore(header, childUl);
+
+          // compute identifier for this folder
+          const headerText = header.innerText || header.textContent || '';
+          const id = idFromText(headerText || (Math.random().toString(36).slice(2,9)));
+          li.dataset.docsifyId = id;
+
+          // click handler: toggle folder (but don't prevent link navigation)
+          header.addEventListener('click', (ev) => {
+            // if user clicked on an anchor inside header — allow navigation
+            const anchor = ev.target.closest('a');
+            if (anchor) {
+              return; // let the link work normally
             }
+            // toggle
+            const collapsed = li.classList.toggle('docsify-collapsed');
+            // update icon
+            const icon = header.querySelector('.docsify-toggle-icon');
+            if (icon) icon.textContent = collapsed ? '▸' : '▾';
+            setOpen(id, !collapsed);
+            ev.stopPropagation();
+          });
+
+          // set initial state from storage (open if in storage)
+          const shouldBeOpen = isOpen(id);
+          if (!shouldBeOpen) {
+            li.classList.add('docsify-collapsed');
+            toggle.textContent = '▸';
+          } else {
+            li.classList.remove('docsify-collapsed');
+            toggle.textContent = '▾';
+          }
+        });
+      }
+
+      // reapply expand/collapse state after docsify renders content
+      function restoreOpenState() {
+        const root = getSidebarRoot();
+        if (!root) return;
+        const saved = loadState();
+        if (!saved || saved.length === 0) return;
+        saved.forEach(id => {
+          const li = root.querySelector(`li[data-docsify-id="${id}"]`);
+          if (li) {
+            li.classList.remove('docsify-collapsed');
+            const icon = li.querySelector('.docsify-toggle-icon');
+            if (icon) icon.textContent = '▾';
+          }
+        });
+      }
+
+      // observe sidebar changes to re-init when Docsify re-renders
+      let observer;
+      function observeSidebar() {
+        const root = getSidebarRoot();
+        if (!root) return;
+        if (observer) observer.disconnect();
+        observer = new MutationObserver((mutations) => {
+          // slight delay to let Docsify finish DOM updates
+          setTimeout(() => {
+            initSidebar();
+            restoreOpenState();
+          }, 0);
+        });
+        observer.observe(root, { childList: true, subtree: true });
+      }
+
+      // Start when DOM ready and also hook into docsify events
+      function start() {
+        initSidebar();
+        restoreOpenState();
+        observeSidebar();
+
+        // Docsify emits events — re-run init after each page render
+        if (window.$docsify) {
+          // use docsify plugin hook if available
+          try {
+            // docsify provides hook interface; we add a plugin that uses doneEach
+            window.$docsify.plugins = (window.$docsify.plugins || []).concat(function (hook) {
+              hook.doneEach(function () {
+                // re-init after page render
+                setTimeout(() => {
+                  initSidebar();
+                  restoreOpenState();
+                }, 0);
+              });
+            });
+          } catch (e) {
+            // fallback: listen to hashchange
+            window.addEventListener('hashchange', () => {
+              setTimeout(() => {
+                initSidebar();
+                restoreOpenState();
+              }, 0);
+            });
+          }
+        } else {
+          // fallback
+          window.addEventListener('hashchange', () => {
+            setTimeout(() => {
+              initSidebar();
+              restoreOpenState();
+            }, 0);
           });
         }
-      });
+      }
 
-      window.addEventListener('hashchange', () => {
-        const last = sessionStorage.getItem('lastActiveLink');
-        if (last) {
-          const activeLink = document.querySelector(`a[href="${last}"]`);
-          if (activeLink) {
-            activeLink.scrollIntoView({ block: 'center' });
-          }
-        }
-      });
+      // Wait for DOMContentLoaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', start);
+      } else {
+        start();
+      }
     })();
   </script>
 </body>
