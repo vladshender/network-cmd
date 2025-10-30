@@ -5,11 +5,10 @@
   <title>Network Docs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Тема Docsify -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
   <style>
-    /* 🔹 Трохи стилю для кращого вигляду */
+    /* Трохи стилів для sidebar */
     .sidebar-nav ul ul {
       padding-left: 1em;
     }
@@ -27,18 +26,41 @@
     window.$docsify = {
       name: 'Network Docs',
       repo: 'vladshender/network-cmd',
-
       loadSidebar: true,
-      subMaxLevel: 0,          // ❌ не генерує підзаголовки автоматично
-      sidebarDisplayLevel: 1,  // 🔹 показує тільки перший рівень відкритим
+      subMaxLevel: 0,
       homepage: 'README.md',
+
+      // 🔹 Додаткові параметри для стабільного згортання
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      sidebarDisplayLevel: 1,
+      auto2top: true,
     };
   </script>
 
-  <!-- Основний Docsify -->
+  <!-- Docsify core -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 
-  <!-- 🔹 Плагін для згортаємого sidebar -->
+  <!-- 🔹 Плагін згортання sidebar (оновлений варіант) -->
   <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-</body>
-</html>
+
+  <!-- 🔹 Плагін для збереження стану sidebar між переходами -->
+  <script>
+    (function () {
+      let lastActive;
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const sidebar = document.querySelector('.sidebar-nav');
+        if (sidebar) {
+          sidebar.addEventListener('click', (e) => {
+            if (e.target && e.target.tagName === 'A') {
+              lastActive = e.target.getAttribute('href');
+              sessionStorage.setItem('lastActiveLink', lastActive);
+            }
+          });
+        }
+      });
+
+      window.addEventListener('hashchange', () => {
+        const last = sessionStorage.getItem('lastActiveLink'
