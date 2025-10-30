@@ -9,16 +9,20 @@
 <body>
   <div id="app">Loading...</div>
 
-<script>
+  <script>
     window.$docsify = {
       name: 'Network Docs',
       repo: 'vladshender/network-cmd',
       loadSidebar: true,
       homepage: 'README.md',
-      
-      // ДОДАЙТЕ ЦЕЙ РЯДОК:
-      subMaxLevel: 0, 
 
+      // --- ОСЬ ВИРІШЕННЯ ---
+      // 1. Встановлюємо 'subMaxLevel', щоб УВІМКНУТИ згортання.
+      //    (Ви можете поставити 3, 4 або 5, залежно від вашої вкладеності)
+      subMaxLevel: 4,
+
+      // 2. 'alias' залишається, щоб бічна панель 
+      //    працювала на всіх сторінках.
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       }
