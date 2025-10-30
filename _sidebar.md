@@ -1,33 +1,34 @@
 * [🏠 Головна](/README.md)
-* **comands**
-  * **distribution and aggregation**
-    * [Cisco](comands/distribution and aggregation/Cisco.md)
-    * [Huawei 93xx 53xx](comands/distribution and aggregation/Huawei 93xx 53xx.md)
-    * [dist-agg](comands/distribution and aggregation/dist-agg.md)
-  * **access**
-    * [BDCOM](comands/access/BDCOM.md)
-    * [D-LINK](comands/access/D-LINK.md)
-    * [Huawei FTTB](comands/access/Huawei FTTB.md)
-    * [Huawei MSAN](comands/access/Huawei MSAN.md)
-    * [Iskratel PON](comands/access/Iskratel PON.md)
-    * [Iskratel SI2000](comands/access/Iskratel SI2000.md)
-    * [Iskratel SI3000](comands/access/Iskratel SI3000.md)
-    * [Raisecom FTTB](comands/access/Raisecom FTTB.md)
-    * [Raisecom PON](comands/access/Raisecom PON.md)
-    * [ZTE FTTB](comands/access/ZTE FTTB.md)
-    * [ZTE PON](comands/access/ZTE PON.md)
-  * **core**
-    * [Juniper](comands/core/Juniper.md)
-    * [core](comands/core/core.md)
-* **advices for configure**
-  * [advices for ZTE configure](advices for configure/advices for ZTE configure.md)
-* **test_pc**
-  * [Check access to resources from test pc](test_pc/Check access to resources from test pc.md)
-  * [Speed testing](test_pc/Speed testing.md)
-* **diagnostics**
-  * [GPON diagnostic](diagnostics/GPON diagnostic.md)
-  * [L2VPN diagnostic](diagnostics/L2VPN diagnostic.md)
-* **others**
-  * [Standart answers](others/Standart answers.md)
-  * [VLAN transfer during planned work](others/VLAN transfer during planned work.md)
-  * [how find L3VPN fake point](others/how find L3VPN fake point.md)
+* **Тестовий_ПК**
+  * [Діагностика доступу до ресурсівз тестового місця](test_pc/Check_access_to_resources_from_test_pc)
+  * [Тестування швидкості з тестового місця](test_pc/Speed_testing)
+* **Діагностика**
+  * [Діагностика L2VPN](diagnostics/L2VPN_diagnostic)
+  * [Діагностика послуги GPON](diagnostics/GPON_diagnostic)
+* **Команди**
+  * **Обладнання доступу**
+    * [BDCOM](commands/access/BDCOM.md)
+    * [D-LINK](commands/access/D-LINK.md)
+    * [Huawei FTTB](commands/access/Huawei_FTTB)
+    * [Huawei MSAN](commands/access/Huawei_MSAN)
+    * [Iskratel PON](commands/access/Iskratel_PON)
+    * [Iskratel SI2000](commands/access/Iskratel_SI2000)
+    * [Iskratel SI3000](commands/access/Iskratel_SI3000)
+    * [Raisecom FTTB](commands/access/Raisecom_FTTB)
+    * [Raisecom PON](commands/access/Raisecom_PON)
+    * [ZTE FTTB](commands/access/ZTE_FTTB)
+    * [ZTE PON](commands/access/ZTE_PON)
+  * **Обладнання ядра**
+    * [Juniper](commands/core/Juniper.md)
+    * [core](commands/core/core.md)
+  * **Обладнання дистрибуції та агрегації**
+    * [Cisco](commands/distribution and aggregation/Cisco.md)
+    * [Huawei 93xx 53xx](commands/distribution and aggregation/Huawei_93xx_53xx)
+    * [dist-agg](commands/distribution and aggregation/dist_agg)
+* **Поради_по_конфігуруванню**
+  * [Поради по конфігуруванню ZTE](advices for configure/advices_for_ZTE_configure)
+* **Інше**
+  * [Перенесення VLANs](others/VLAN_transfer_during_planned_work)
+  * [Пошук L3VPN fake точок](others/how_find_L3VPN_fake_point)
+  * [Стандартні відписки](others/Standart_answers)
+
