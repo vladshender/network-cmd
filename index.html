@@ -63,4 +63,15 @@
       });
 
       window.addEventListener('hashchange', () => {
-        const last = sessionStorage.getItem('lastActiveLink'
+        const last = sessionStorage.getItem('lastActiveLink');
+        if (last) {
+          const activeLink = document.querySelector(`a[href="${last}"]`);
+          if (activeLink) {
+            activeLink.scrollIntoView({ block: 'center' });
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
