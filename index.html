@@ -5,29 +5,6 @@
   <title>Network Docs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <style>
-    .folder {
-      cursor: pointer;
-      font-weight: bold;
-      user-select: none;
-    }
-    .folder::before {
-      content: "▶";
-      display: inline-block;
-      margin-right: 5px;
-      transition: transform 0.2s;
-    }
-    .folder.open::before {
-      transform: rotate(90deg);
-    }
-    .folder + ul {
-      margin-left: 1em;
-      display: none;
-    }
-    .folder.open + ul {
-      display: block;
-    }
-  </style>
 </head>
 <body>
   <div id="app">Loading...</div>
@@ -36,50 +13,19 @@
     window.$docsify = {
       name: 'Network Docs',
       repo: 'vladshender/network-cmd',
-      loadSidebar: true,
-      subMaxLevel: 2,
-      homepage: 'README.md',
+      loadSidebar: true,      // Завантажує _sidebar.md
+      homepage: 'README.md',  // Встановлює домашню сторінку
+
+      // Цей 'alias' виправляє завантаження бічної панелі,
+      // коли ви перебуваєте на глибоко вкладених сторінках.
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
-      },
-      doneEach: function () {
-        setupSidebarFolders();
       }
+
+      // Ми видалили 'subMaxLevel', щоб вимкнути дублювання заголовків.
+      // Ми видалили 'doneEach' та кастомний JS/CSS,
+      // щоб дозволити Docsify самому керувати папками.
     };
-
-    function setupSidebarFolders() {
-      const sidebar = document.querySelector('.sidebar-nav');
-      if (!sidebar) return;
-
-      // Запобігаємо дублюванню
-      if (sidebar.dataset.enhanced === "true") return;
-      sidebar.dataset.enhanced = "true";
-
-      sidebar.querySelectorAll('li > ul').forEach(ul => {
-        const parentLi = ul.parentElement;
-        const link = parentLi.querySelector('a');
-
-        if (link && !link.classList.contains('folder')) {
-          link.classList.add('folder');
-          const key = link.getAttribute('href');
-          const saved = localStorage.getItem(key + '_open') === 'true';
-
-          if (saved) link.classList.add('open');
-          if (saved) ul.style.display = 'block';
-
-          link.addEventListener('click', (e) => {
-            // Якщо це папка (а не файл)
-            if (ul && ul.children.length > 0) {
-              e.preventDefault();
-              link.classList.toggle('open');
-              const isOpen = link.classList.contains('open');
-              ul.style.display = isOpen ? 'block' : 'none';
-              localStorage.setItem(key + '_open', isOpen);
-            }
-          });
-        }
-      });
-    }
   </script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
