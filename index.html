@@ -9,22 +9,19 @@
 <body>
   <div id="app">Loading...</div>
 
-  <script>
+<script>
     window.$docsify = {
       name: 'Network Docs',
       repo: 'vladshender/network-cmd',
-      loadSidebar: true,      // Завантажує _sidebar.md
-      homepage: 'README.md',  // Встановлює домашню сторінку
+      loadSidebar: true,
+      homepage: 'README.md',
+      
+      // ДОДАЙТЕ ЦЕЙ РЯДОК:
+      subMaxLevel: 0, 
 
-      // Цей 'alias' виправляє завантаження бічної панелі,
-      // коли ви перебуваєте на глибоко вкладених сторінках.
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       }
-
-      // Ми видалили 'subMaxLevel', щоб вимкнути дублювання заголовків.
-      // Ми видалили 'doneEach' та кастомний JS/CSS,
-      // щоб дозволити Docsify самому керувати папками.
     };
   </script>
 
