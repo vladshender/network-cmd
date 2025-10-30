@@ -1,12 +1,10 @@
 * [🏠 Головна](/README.md)
-* **Тестовий_ПК**
-  * [Діагностика доступу до ресурсівз тестового місця](test_pc/Check access to resources from test pc)
-  * [Тестування швидкості з тестового місця](test_pc/Speed testing)
-* **Діагностика**
-  * [Діагностика L2VPN](diagnostics/L2VPN diagnostic)
-  * [Діагностика послуги GPON](diagnostics/GPON diagnostic)
-* **Команди**
-  * **Обладнання доступу**
+* **comands**
+  * **distribution and aggregation**
+    * [Cisco](comands/distribution and aggregation/Cisco.md)
+    * [Huawei 93xx 53xx](comands/distribution and aggregation/Huawei 93xx 53xx.md)
+    * [dist-agg](comands/distribution and aggregation/dist-agg.md)
+  * **access**
     * [BDCOM](comands/access/BDCOM.md)
     * [D-LINK](comands/access/D-LINK.md)
     * [Huawei FTTB](comands/access/Huawei FTTB.md)
@@ -18,16 +16,18 @@
     * [Raisecom PON](comands/access/Raisecom PON.md)
     * [ZTE FTTB](comands/access/ZTE FTTB.md)
     * [ZTE PON](comands/access/ZTE PON.md)
-  * **Обладнання ядра**
+  * **core**
     * [Juniper](comands/core/Juniper.md)
     * [core](comands/core/core.md)
-  * **Обладнання дистрибуції та агрегації**
-    * [Cisco](comands/distribution and aggregation/Cisco.md)
-    * [Huawei 93xx 53xx](comands/distribution and aggregation/Huawei 93xx 53xx.md)
-    * [dist-agg](comands/distribution and aggregation/dist-agg.md)
-* **Поради_по_конфігуруванню**
-  * [Поради по конфігуруванню ZTE](advices for configure/advices for ZTE configure)
-* **Інше**
-  * [Перенесення VLANs](others/VLAN transfer during planned work)
-  * [Пошук L3VPN fake точок](others/how find L3VPN fake point)
-  * [Стандартні відписки](others/Standart answers)
+* **advices for configure**
+  * [advices for ZTE configure](advices for configure/advices for ZTE configure.md)
+* **test_pc**
+  * [Check access to resources from test pc](test_pc/Check access to resources from test pc.md)
+  * [Speed testing](test_pc/Speed testing.md)
+* **diagnostics**
+  * [GPON diagnostic](diagnostics/GPON diagnostic.md)
+  * [L2VPN diagnostic](diagnostics/L2VPN diagnostic.md)
+* **others**
+  * [Standart answers](others/Standart answers.md)
+  * [VLAN transfer during planned work](others/VLAN transfer during planned work.md)
+  * [how find L3VPN fake point](others/how find L3VPN fake point.md)
