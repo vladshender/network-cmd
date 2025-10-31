@@ -1,5 +1,5 @@
 * [🏠 Головна](/README.md)
-* [Обладнання доступу]access
+* Обладнання доступу
   * [BDCOM](access/BDCOM.md)
   * [D-LINK](access/D-LINK.md)
   * [Huawei FTTB](access/Huawei_FTTB.md)
@@ -11,11 +11,11 @@
   * [Raisecom PON](access/Raisecom_PON.md)
   * [ZTE FTTB](access/ZTE_FTTB.md)
   * [ZTE PON](access/ZTE_PON.md)
-* [Дистрибуція та Агрегація]distribution and aggregation
+* Дистрибуція та Агрегація
   * [Cisco](aggregation/Cisco.md)
   * [Huawei 93xx та 53xx](aggregation/Huawei_93xx_53xx.md)
   * [ZTE 82xx](aggregation/ZTE_82xx.md)
   * [Dist Agg](aggregation/dist_agg.md)
-* [Обладнання ядра]core
+* Обладнання ядра
   * [Juniper](core/Juniper.md)
   * [Сore](core/core.md)
