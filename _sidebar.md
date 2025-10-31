@@ -1,21 +1,21 @@
 * [🏠 Головна](/README.md)
-* distribution and aggregation
-  * [Cisco](aggregation/Cisco.md)
-  * [Huawei_93xx_53xx](aggregation/Huawei_93xx_53xx.md)
-  * [ZTE_82xx](aggregation/ZTE_82xx.md)
-  * [dist_agg](aggregation/dist_agg.md)
-* access
+* [Обладнання доступу]access
   * [BDCOM](access/BDCOM.md)
   * [D-LINK](access/D-LINK.md)
-  * [Huawei_FTTB](access/Huawei_FTTB.md)
-  * [Huawei_MSAN](access/Huawei_MSAN.md)
-  * [Iskratel_PON](access/Iskratel_PON.md)
-  * [Iskratel_SI2000](access/Iskratel_SI2000.md)
-  * [Iskratel_SI3000](access/Iskratel_SI3000.md)
-  * [Raisecom_FTTB](access/Raisecom_FTTB.md)
-  * [Raisecom_PON](access/Raisecom_PON.md)
-  * [ZTE_FTTB](access/ZTE_FTTB.md)
-  * [ZTE_PON](access/ZTE_PON.md)
-* core
+  * [Huawei FTTB](access/Huawei_FTTB.md)
+  * [Huawei MSAN](access/Huawei_MSAN.md)
+  * [Iskratel PON](access/Iskratel_PON.md)
+  * [Iskratel SI2000](access/Iskratel_SI2000.md)
+  * [Iskratel SI3000](access/Iskratel_SI3000.md)
+  * [Raisecom FTTB](access/Raisecom_FTTB.md)
+  * [Raisecom PON](access/Raisecom_PON.md)
+  * [ZTE FTTB](access/ZTE_FTTB.md)
+  * [ZTE PON](access/ZTE_PON.md)
+* [Дистрибуція та Агрегація]distribution and aggregation
+  * [Cisco](aggregation/Cisco.md)
+  * [Huawei 93xx та 53xx](aggregation/Huawei_93xx_53xx.md)
+  * [ZTE 82xx](aggregation/ZTE_82xx.md)
+  * [Dist Agg](aggregation/dist_agg.md)
+* [Обладнання ядра]core
   * [Juniper](core/Juniper.md)
-  * [core](core/core.md)
+  * [Сore](core/core.md)
