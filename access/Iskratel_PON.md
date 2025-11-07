@@ -16,6 +16,8 @@
     show sysinfo 
     show version
     show hardware
+    show boot package
+    show shelf-id 
 ##### Перезавантажити ONU
     configure
     interface 0/1/2
