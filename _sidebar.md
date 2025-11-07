@@ -3,7 +3,7 @@
   * [BDCOM](access/BDCOM.md)
   * [D-LINK](access/D-LINK.md)
   * [Huawei FTTB](access/Huawei_FTTB.md)
-  * [Huawei MSAN](access/Huawei_MSAN.md)
+  * [Huawei MSAN](access/Huawei_56.md)
   * [Iskratel PON](access/Iskratel_PON.md)
   * [Iskratel SI2000](access/Iskratel_SI2000.md)
   * [Iskratel SI3000](access/Iskratel_SI3000.md)
