@@ -1,28 +1,26 @@
-## PON ISkratel 
-
-#### rv-zdolbun-grush15-pon-ik1s2# show port all 
+## Стандартна перевірка
+##### Перегляд стану всіх портів та ONU
     show port all
-
-Якщо нам потрібно перевірити х/y/z, то спочатку перевіряємо x/y аби були в Up.
-Якщо Down – нема сенсу далі перевіряти.
-
-#### rv-zdolbun-grush15-pon-ik1s2# show port 0/6/2
-
-    show port 
-Переглядаємо МАС-адрес на порту. 
-#### rv-zdolbun-grush15-pon-ik1s2# show mac-addr-table interface 0/6/35
-
-    show mac-addr-table interface 
-Переглядаємо інформацію по пристрою(час роботи). 
-#### rv-zdolbun-grush15-pon-ik1s2# show sysinfo
-
+##### Перегляд інформації по конкретному порту
+    show port 0/6/2
+##### Переглядаємо МАС-адрес на порту.
+    show mac-addr-table interface 0/1/2
+    show mac-addr-table vlan 602
+##### Переглянути детальну інформацію про ОНУ
+    show onu interface 0/1/2
+##### Перегляд логів на обладнанні
+    show logging file MsgErr
+## Додаткова перевірка
+##### Перегляд інформації про пристрій(mac, uptime)
     show sysinfo 
-Перегляд логів
-#### dc-svyatogirsk-maz54-pon-ik1s1# show logging file MsgErr
-
-    show logging file MsgErr 
-
-#### reset port
-    clear ipsg interface 0/5/33/2
-#####    
+##### Перезавантажити ONU
+    configure
+    interface 0/1/2
+    shutdown
+    no shutdown
+    Паралельно треба завершити сесію в АРМУС
+##### Перегляд DHCP сесії по інтерфейсу
     show dhcpsnooping interface 0/5/33
+##### Очистити DHCP сесію
+    clear dhcpsnooping interface 0/5/33/2
+    **x/y/z/2 - 2 можна взяти переглянувти маки або сесію по інтерфейсу**
