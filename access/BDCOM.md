@@ -1,3 +1,4 @@
+## Стандартна перевірка ONU
 ##### Щоб увійти в привілегійовий режим
     enable
 ##### Стан всіх інтерфейсів
@@ -14,10 +15,11 @@
     show epon optical-transceiver-diagnosis 
 ##### Подивитись оптичні показники по ONU
     show epon inteface epon 0/3:1 onu ctc optical-transceiver-diagnosis
-    ----
+    або
     show epon optical-transceiver-diagnosis interface EPON0/1:4   
 ##### Перезавантажити ONU\OLT 
     epon reboot onu\olt interface EPON 0/1:1
+## Інше
 ##### Перевірити Uptime обладнання та current time
     show version
 ##### Подивитись конфігурацію
