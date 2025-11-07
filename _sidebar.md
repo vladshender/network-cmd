@@ -6,7 +6,6 @@
   * [Huawei MSAN](access/Huawei_56.md)
   * [Iskratel PON](access/Iskratel_PON.md)
   * [Iskratel SI2000](access/Iskratel_SI2000.md)
-  * [Iskratel SI3000](access/Iskratel_SI3000.md)
   * [Raisecom FTTB](access/Raisecom_FTTB.md)
   * [Raisecom PON](access/Raisecom_PON.md)
   * [ZTE FTTB](access/ZTE_FTTB.md)
