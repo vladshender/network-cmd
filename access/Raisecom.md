@@ -1,7 +1,8 @@
 ### Стандартна перевірка
-##### перегляд інтерфейсів
+##### Перегляд інформації по інтерфейсам
     show interface brief
     show interface description
+    show interface gigaethernet 1/1/23
 ##### Перегляд МАС-адреси по порту
     show mac-address dynamic gigaethernet 1/1/23
     show mac-address dynamic vlan 602
@@ -17,7 +18,7 @@
 ##### Перевірка uptime, софту, дати
     show version
 ##### Перегляд оптичних показників порту
-    show transceiver ddm gigaethernet 1/1/28 
+    show transceiver ddm gigaethernet 1/1/28 detail
 ##### Перегляд історії помилок оптичних показників
     show transceiver ddm alarm history 
 
