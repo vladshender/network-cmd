@@ -1,4 +1,11 @@
 * [🏠 Головна](/README.md)
+* Checklist
+  * [Послуга GPON](checklist/gpon.md)
+  * [Послуга DSL](checklist/dsl.md)
+  * [Послуга L3VPN](checklist/l3vpn.md)
+  * [Послуга L2VPN](checklist/l2vpn.md)
+  * [Послуга BGP](checklist/bgp.md)
+  * [Інші послуги](checklist/other.md)
 * Обладнання доступу
   * [BDCOM](access/BDCOM.md)
   * [D-LINK](access/D-LINK.md)
@@ -14,7 +21,5 @@
   * [Cisco](aggregation/Cisco.md)
   * [Huawei 93xx та 53xx](aggregation/Huawei_93xx_53xx.md)
   * [ZTE 82xx](aggregation/ZTE_82xx.md)
-  * [Dist Agg](aggregation/dist_agg.md)
 * Обладнання ядра
   * [Juniper](core/Juniper.md)
-  * [Сore](core/core.md)
