@@ -8,7 +8,7 @@
   * [Iskratel SI2000](access/Iskratel_SI2000.md)
   * [Raisecom](access/Raisecom.md)
   * [Raisecom PON](access/Raisecom_PON.md)
-  * [ZTE FTTB](access/ZTE_FTTB.md)
+  * [ZTE](access/ZTE.md)
   * [ZTE PON](access/ZTE_PON.md)
 * Дистрибуція та Агрегація
   * [Cisco](aggregation/Cisco.md)
