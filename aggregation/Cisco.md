@@ -1,4 +1,3 @@
-## Стандартна перевірка
 ##### Подивись статус та опис всіх портів
     show interface des
     show interface brief
