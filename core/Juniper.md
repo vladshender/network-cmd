@@ -1,23 +1,23 @@
-## Juniper
-
-#### Перегляд інформації по інтерфейсам (фізичні та логічні)
-    show interfaces xe-a/b/c
-####
-    show interfaces ae(1,2,3)
-
-
-
+## Стандартна перевірка порту
+#### Перегляд інформації про порт або інтерфейс
+    show interfaces xe-a/b/c або ae8(агрегований лінк)
+    show interfaces ae5.9393
 #### Перeгляд розширеної інформації по інтерфейсу
-    show interfaces xe-a/b/c extensive
-####
-    show interfaces ae(1,2,3) extensive
-
+	Дозволяє подивитись дропи пакетів та СРС помилки
+	Якщо конкретно треба СРС, то можна додати | match CRC
+    show interfaces xe-a/b/c extensive 
+    show interfaces ae5.9393 extensive
 #### Перегляд оптичних показників по інтерфейсу.
+	Для користувача center недоступна, треба переходити в привілегійовий режим, через пам доступна
     show interfaces diagnostics optics xe-1/2/3
-
-#### Перегляд лічильників інтерфейсу.
-    monitor interface 
-
+#### Перегляд трафіку на інтерфейсі або порту в real-time
+	monitor interface xe-a/b/c
+    monitor interface ae5.9393
+## Перевірка абонента НЕ DHCP
+## Перевірка абонента DHCP
+## Пінг абонентів, обладнання та сайтів
+## Переноси вланів
+## Перевірка стану самого обладнання
 #### Перегляд ARP табл по IRB аб-та L3vpn, Prof
     show arp | match 7182 
 
