@@ -1,67 +1,240 @@
 ## Стандартна перевірка порту
-##### Перегляд інформації про порт або інтерфейс
-    show interfaces xe-a/b/c або ae8 - перегляд інформації по хgigaethernet(xe) порту або агрегованому лінку(ae8)
-    show interfaces ae5.9393 - перегляд інформації по логічному інтерфейсу
-##### Перeгляд розширеної інформації по інтерфейсу
-	Дозволяє подивитись дропи пакетів та СРС помилки
-	Якщо конкретно треба СРС, то можна додати | match CRC
-    show interfaces xe-a/b/c extensive 
+
+- **Перегляд інформації про порт або інтерфейс**:
+    - Для перегляду інформації про фізичний порт (XGigabitEthernet або агрегований лінк):
+        ```bash
+        show interfaces xe-a/b/c або ae8
+        ```
+    - Для перегляду інформації по логічному інтерфейсу:
+        ```bash
+        show interfaces ae5.9393
+        ```
+
+- **Перегляд розширеної інформації по інтерфейсу**:
+    _Ця команда дозволяє побачити статистику пакетів, зокрема дропи та CRC помилки. Для конкретних СРС помилок можна додати фільтр `| match CRC`._
+    ```bash
+    show interfaces xe-a/b/c extensive
     show interfaces ae5.9393 extensive
-##### Перегляд оптичних показників по інтерфейсу.
-	Для користувача center недоступна, треба переходити в привілегійовий режим. Через пам логін команда доступна 
+    ```
+
+- **Перегляд оптичних показників по інтерфейсу**:
+    _Для користувачів `center` доступність обмежена. Щоб отримати доступ, потрібно увійти в привілегійовий режим._
+    ```bash
     show interfaces diagnostics optics xe-1/2/3
-##### Перегляд трафіку на інтерфейсі або порту в real-time
-	monitor interface xe-a/b/c
+    ```
+
+- **Перегляд трафіку на інтерфейсі в реальному часі**:
+    ```bash
+    monitor interface xe-a/b/c
     monitor interface ae5.9393
+    ```
+
 ## Перевірка абонента НЕ DHCP
-##### Наступні 2 команди дозволяють переглянути конфігурацію по абоненту profi, l3vpn
-	show route table l3vpn-obu.ua ip client | match irb - для l3vpn
-	show route ip | match irb - для profi
-	show configure | display set | match xxxx - де хххх береться з ae0.xxxx 
-##### Переглянути маків
-	Корисно переглянути іноді чи приходить мак від абонента на маршрутизатор
-	show bridge mac-table interface ae0.[знову вставляємо цифри з команди пошуку irb] - дозволяє переглянути вивчені макі за певним інтерфейсом
-	show arp | match ip or mac - дозволяє переглянути відповідність ip та маку в arp таблиці
+
+- **Перегляд конфігурації абонента**:
+    - Для `l3vpn`:
+        ```bash
+        show route table l3vpn-obu.ua ip client | match irb
+        ```
+    - Для `profi`:
+        ```bash
+        show route ip | match irb
+        ```
+    - Для загальної конфігурації:
+        ```bash
+        show configure | display set | match xxxx
+        ```
+        _Де `xxxx` береться з команд пошуку по інтерфейсу `ae0.xxxx`._
+
+- **Перегляд MAC-адрес**:
+    - Перевірка MAC-адрес на порту:
+        ```bash
+        show bridge mac-table interface ae0.xxxx
+        ```
+    - Перевірка відповідності IP та MAC в ARP таблиці:
+        ```bash
+        show arp | match ip or mac
+        ```
+
 ## Перевірка абонента DHCP
-	show subscribers | match ip or name node or mac - дозволяє побачити чи наявна активна сесія на маршрутизаторі
-	show subscripers summary - дозволяє переглянути кількість активних сесій в загальному на маршрутизаторі
-	show dhcp relay binding ip-client - вивід команди покаже інтерфейс DHCP абонента - demux0.xxxxx та в якому логічному інтерфейсі він знаходиться ae0.xxxx - цей логічний інтерфейс належить обладнанню доступу, тобто в йому належать багато інтерфейсів DHCP абонентів
-	show interface demux0.xxxxx extensive - дозволить побачити які фільтри на обмеження швидкості вставнолені на інтерфейсі DHCP абонента
-	show configure | display set | match xxxx - де хххх береться з ae0.xxxx дозволяє знайти шлюз абонента
-## Перевірка BGP 
-	В BGP сесії state має бути Established, всі інши стани означаю що вона зараз не працює.
-	show bgp summary - покаже коротку інформацію по BGP сесіям
-	show bgp neigbour - покаже детальну інформацію по BGP сесіям
-	show bgp neigbour ip-client - покаже інформацію по конкретній BGP сесії
-	show route advertising-protocol bgp ip-clien - покаже ip-prefixes, які ми передаємо через bgp сесію партнеру
-	show route receive-protocol bgp ip-clien - покаже ip-prefixes, які ми отримуємо через bgp сесію з партнером
+
+- **Перевірка активних сесій DHCP**:
+    - Перевірка сесії абонента:
+        ```bash
+        show subscribers | match ip or name node or mac
+        ```
+    - Перегляд загальної кількості активних сесій:
+        ```bash
+        show subscribers summary
+        ```
+
+- **Перевірка прив'язки DHCP**:
+    - Перегляд прив'язки для IP клієнта:
+        ```bash
+        show dhcp relay binding ip-client
+        ```
+        _Ця команда покаже інтерфейс DHCP абонента (наприклад, `demux0.xxxxx`) та відповідний логічний інтерфейс._
+
+- **Перегляд інтерфейсу DHCP абонента**:
+    ```bash
+    show interface demux0.xxxxx extensive
+    ```
+
+- **Перегляд шлюзу абонента**:
+    ```bash
+    show configure | display set | match xxxx
+    ```
+    _Де `xxxx` береться з інтерфейсу `ae0.xxxx`._
+
+## Перевірка BGP
+
+- **Перевірка стану BGP сесії**:
+    - Перевірка загального стану BGP:
+        ```bash
+        show bgp summary
+        ```
+    - Детальна інформація по BGP сесіям:
+        ```bash
+        show bgp neighbour
+        ```
+    - Перевірка конкретної BGP сесії:
+        ```bash
+        show bgp neighbour ip-client
+        ```
+
+- **Перевірка переданих та отриманих IP-prefixes**:
+    - Для перевірки рекламованих через BGP IP-префіксів:
+        ```bash
+        show route advertising-protocol bgp ip-client
+        ```
+    - Для перевірки отриманих через BGP IP-префіксів:
+        ```bash
+        show route receive-protocol bgp ip-client
+        ```
+
 ## Пінг абонентів, обладнання та сайтів
-	show route ip_site - показує через який інтерфейс йде паршрут до вказаного ресурсу
-	ping ip clien - пінг абонентів з білою IP адресою(gpon, dsl, profi, fttb)
-	ping routing-instance l3vpn-obu.ua ip-client - пінг абонентів l3vpn
-	ping routing-instance ZTE-control - пінг обладнання доступу з IP адресами 10.168.х.х
-	ping routing-instance dslam-control - пінг обладнання з IP адресами 192.168.х.х(навіть cisco)
-	ping routing-instance Huawei-control - пінг Huawei дистрибуції-агрегації(93xx, 53xx)
-	ping routing-instance ZTE_NEW-control - пінг ZTE агрегації(8902)
-	ping ip_site source client_gateway - пінг IP адреси(наприклад якогось сайту), де client_gateway - шлюз абонента
-###### Якщо треба в рандомний момент перевірити доступ до ресурсу__
-	show interface lo0 - виконавши команду, можна знайти деякі шлюзи на маршрутизаторі(закінчуюється ip на .1)
-	І використати його для пінгу ресурсу - це дасть змогу швидко перевірити доступ до ресурсу з нашого маршрутизатору 
-###### Модифікації для пінгу**
-	ping ip_client rapid count 1000 size 1472 do-not-fragment - дозволяє відправити 1000 швидких пакетів з розміром 1472 байт нефрагментованими
-	traceroute ip_site source client_gateway - виконати трасування до певного ресурсу з шлюза абонента
-###### Щоб виконати пінг до певного ресурсу з border маршрутизатора(-BR-)**
-	Шлюз з якого буде йти пінг потрібно взяти з будь якої bgp сесії, а саме Local: ip-address
-	І виконати аналогічну команду, як вказана вище
-## Переноси вланів
-	Потрібно зайти в конфіг режим
-	скопіювати з пошти та вставати вказані команди - set ....
-	сommit - далі зазвичай з'явиться помилка з повідомленням, що проблеми з певним інтерфейсом ae0.xxxx
-	run clear dhcp relay binding interface ae0.xxxx - інтерфейс з помилки(потрібно вставити весь інтерфейс ae0.xxxx)
-	і далі знову commit, якщо знову вилазить помилка повторити дії вище, поки commit не буде успішним
-## Перевірка стану самого обладнання
-	show log messages - де messages це самі останні логи, chassisd.0.gz це наступний блок трохи старіших і так далі - chassisd.1.gz
-	show chassis alarms - активні аларми з станом обладнання
-	show chassis enviromental - стан та температура комплектуючих
-	show chassis power - стан блоків живлення
-	show chassis ? - можна вибрати що треба подивитись по самому обладнанню
+
+- **Пінг за маршрутом**:
+    - Перевірка маршруту до ресурсу:
+        ```bash
+        show route ip_site
+        ```
+
+- **Пінг абонентів**:
+    - Пінг абонента з білою IP адресою (GPON, DSL, Profi, FTTB):
+        ```bash
+        ping ip-client
+        ```
+    - Пінг абонентів L3VPN:
+        ```bash
+        ping routing-instance l3vpn-obu.ua ip-client
+        ```
+
+- **Пінг обладнання**:
+    - Пінг обладнання доступу (IP 10.168.x.x):
+        ```bash
+        ping routing-instance ZTE-control
+        ```
+    - Пінг обладнання доступу з IP 192.168.x.x:
+        ```bash
+        ping routing-instance dslam-control
+        ```
+    - Пінг Huawei агрегації:
+        ```bash
+        ping routing-instance Huawei-control
+        ```
+    - Пінг ZTE агрегації:
+        ```bash
+        ping routing-instance ZTE_NEW-control
+        ```
+
+- **Пінг з шлюзу абонента**:
+    ```bash
+    ping ip_site source client_gateway
+    ```
+
+### Перевірка доступу до ресурсу
+
+- **Швидка перевірка доступу до ресурсу**:
+    - Для перевірки шлюзів на маршрутизаторі:
+        ```bash
+        show interface lo0
+        ```
+    - Використовуйте знайдений шлюз для пінгу:
+        ```bash
+        ping <resource-ip>
+        ```
+
+### Модифікації для пінгу
+
+- **Пінг з великим розміром пакета**:
+    ```bash
+    ping ip-client rapid count 1000 size 1472 do-not-fragment
+    ```
+
+- **Трасування до ресурсу через шлюз абонента**:
+    ```bash
+    traceroute ip_site source client_gateway
+    ```
+
+### Пінг з Border маршрутизатора
+
+- **Пінг через BGP шлюз**:
+    _Шлюз з якого буде йти пінг береться з будь-якої BGP сесії, зокрема з поля `Local: ip-address`._
+    ```bash
+    ping <resource-ip> source <bgp-local-ip>
+    ```
+
+## Переноси VLAN
+
+- **Процес перенесення VLAN**:
+    1. Зайти в конфігураційний режим:
+        ```bash
+        configure
+        ```
+    2. Вставити вказані команди (зазвичай через пошту):
+        ```bash
+        set ...
+        ```
+    3. Застосувати зміни:
+        ```bash
+        commit
+        ```
+    4. Якщо з'являється помилка, виконайте команду для очищення DHCP прив'язки:
+        ```bash
+        run clear dhcp relay binding interface ae0.xxxx
+        ```
+    5. Повторіть `commit` до успішного завершення.
+
+## Перевірка стану обладнання
+
+- **Перегляд логів**:
+    - Останні логи:
+        ```bash
+        show log messages
+        ```
+    - Старіші логи (наприклад, `chassisd.0.gz`):
+        ```bash
+        show log chassisd.0.gz
+        ```
+
+- **Перегляд активних алармів**:
+    ```bash
+    show chassis alarms
+    ```
+
+- **Перевірка стану комплектуючих**:
+    ```bash
+    show chassis environmental
+    ```
+
+- **Перевірка стану блоків живлення**:
+    ```bash
+    show chassis power
+    ```
+
+- **Інші команди для перевірки обладнання**:
+    ```bash
+    show chassis ?
+    ```
+
