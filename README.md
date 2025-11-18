@@ -25,4 +25,3 @@
 | Миколаївська	| 10mk114	| swmk114 |
 | Одеська	| 10od115 | swod115 |
 | Полтавська | polt116 |	swpl116 |
-<img width="872" height="626" alt="image" src="https://github.com/user-attachments/assets/8a46228e-26f8-46cf-82c1-a2c5cf8d8a9a" />
