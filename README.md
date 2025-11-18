@@ -1,6 +1,20 @@
 # Тут буде опис всього репо
-## Паролі до Iskratel
-| Область	| Пароль ADSL 32/48 |	ES Switch |
+## Номери телефоні адміністраторів
+<details>
+  <summary></summary>
+</details>
+
+## Макрорегіони
+<details>
+  <summary></summary>
+</details>
+
+## Паролі
+<details>
+  
+  <summary></summary>
+  
+  | Область	| Пароль ADSL 32/48 |	ES Switch |
 |----------|------------------|-----------|
 | Рівненська | 10rv117 | swrv117 |
 |Сумська	| 00su119	| swsm119 |
@@ -19,9 +33,11 @@
 | Запорізька | 00zp108	| swzp108 |
 | Ів-Франківська	00if109 |	swif109 |
 | Кіровоградська | 00kg110	| swkg101 |
-| Київська міська	| user: kiev246\puss: 00kv100	| swkv100 |
-|Київська обл. |	00ko101	| swko101 |
-| Львівська	| 10lv113 |	swlv113 |
-| Миколаївська	| 10mk114	| swmk114 |
-| Одеська	| 10od115 | swod115 |
-| Полтавська | polt116 |	swpl116 |
+  
+</details>
+
+## Паролі до Iskratel
+<details>
+  <summary></summary>
+</details>
+
