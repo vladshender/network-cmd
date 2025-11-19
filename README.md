@@ -125,11 +125,24 @@
 
 | Обладнання | Логін | Пароль |
 |------------|-------|--------|
-| ZTE | | |
-| Dlink | | |
-| Raisecom |||
-| BDCOM |||
-| Iskratel GPON |||
+| ZTE | zmina | c=3x10e8 |
+| | admin | e=mc2 |
+| | admin | e=mc2new |
+| | admin | E=mc2 |
+| | admin | E=mc2new |
+| | admin | zhongxing|
+| | admin | zxr10 |
+| Dlink | admin | smenapass |
+| | root | dlinkukrtel |
+| Raisecom | Raisecom | Raisecom |
+| | raisecom | raisecom |
+| | zmina | centerukrtel1 |
+| Huawei| Admin | 12345qwe |
+| | admin | 123qwe|
+| | zmina | zmina123| 
+| | admin | 1qaz1qaz|
+| BDCOM | zmina | zmina123 |
+| Iskratel GPON | zmina | Ukr999tel|
 
 ### Паролі Iskratel SI2000
 
@@ -189,23 +202,26 @@
   
 | Область	| 5300 |	5600 |
 |----------|------------------|-----------|
-| | root | root |
-| Рівненська | 10rv117 | swrv117 |
-| Сумська	| 00su119	| swsm119 |
-| Тернопільска	| 10tr120	| swtr120 |
-| Харківська | 10hr121 | swhr121 |
-| Херсонська | 10hs122	| swhs122 |
-| Хмельницька |	10hm123 | swhm122 |
-| Черкаська	| 10ck124	| swck124 |
-| Чернівецька |	10cv125 |	swcn125 |
-| Чернігівська	| 10cg126	| swcg126 |
-| Вінницька |	00vc102	| swvc102 |
-| Волинська	| 00lc103	| swlc103 |
-| Дніпропетровська | 00dp104 | swdp104 |
-| Житомирська	| 00zt106	| swzt106 |
-| Закарпатьська	| 00ug107 |	swug107 |
-| Запорізька | 00zp108	| swzp108 |
-| Ів-Франківська	00if109 |	swif109 |
-| Кіровоградська | 00kg110	| swkg101 |
+| login | root | root |
+| Київ | dvb54 | jkrn29 |
+| Київська область | | aass32|
+| Рівненська | aja46 | lmbl89 |
+| Сумська	| hrv54	| sklh75 |
+| Тернопільска	| apo23	| sjgk43 |
+| Харківська | asw59 | asw59 |
+| Херсонська | rer51	| dnso39 |
+| Хмельницька |	njk65 | pndj23 |
+| Черкаська	| pqw19	| wnrd92 |
+| Чернівецька |	srt46 |	winr10 |
+| Чернігівська	| afh37	| qqni64 |
+| Вінницька |	wed54	| sntc53 |
+| Волинська	| ere71	| sdka56 |
+| Дніпропетровська | klm59 | dbv482 |
+| Донецька | oiv72 | ensu48 |
+| Житомирська	| avt84	| klsd25 |
+| Закарпатьська	| ien56 |	sdfn54 |
+| Запорізька | udf69	| sdfk34 |
+| Ів-Франківська	dwx42 |	slhf77 |
+| Кіровоградська | lhj46 | dksi93 |
 
 
