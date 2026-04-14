@@ -4,6 +4,8 @@
     _Для перегляду стану всіх портів на певній платі:_
     ```bash
     display board 0/16
+    display ont info 0 16 1 3 - перегляд інформації по ONU(0 - frame, 16 - board, 1 - port, 3 onu-id)
+    display ont info option run-state 0 16 1 3 - перегляд оптичних показників по ONU
     ```
 
 - **Перегляд MAC-адрес**:
