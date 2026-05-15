@@ -23,8 +23,10 @@
 ##### Адміністративно вимкнути/увімкнути ОНУ
     configure terminal
     interface gpon_onu-1/3/1:39 
-    admin disable - адміністративно закрити
-    enable - адміністративно відкрити
+    admin x
+        , де х:
+            disable - адміністративно закрити
+            enable - адміністративно відкрити
 
 ## Додатково
 ##### Перегляд uptime, soft
@@ -40,4 +42,6 @@
     configure terminal
     mac delete dynamic interface vport-1/3/7.3:1
     ip dhcp snooping clear interface vport-1/3/7.3:1 CA21.72EB.58BC vlan 1300
+
+## Конфігурація
 
