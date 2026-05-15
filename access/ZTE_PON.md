@@ -1,16 +1,16 @@
 ## Стандартна перевірка
 ##### Перегляд всіх ONU на порту
-    show pon onu information gpon_olt-1/3/15
-    1/3 - пишеться завжди, далі номер порту(іноді може бути 1/1 і тоді буде 1/1/1, де остання 1 це номер порту)
+    show pon onu information gpon_olt-1/3/x
+    1/3 - пишеться завжди, далі x - беремо з УС
     DyingGasp - статус ОНУ означає, що вона на "на останньому подиху, щоб упасти" - перевіряти далі
 ##### Перегляд інформації по ONU 
     show gpon onu detail-info gpon_onu-1/3/1:1
     show pon onu information gpon_onu-1/3/1:1
     show gpon remote-onu interface eth gpon_onu_1/3/1:1 - перегляд швидкості на eth-порту ONU.
-##### Якщо необхідно переглянути МАС-адресу на порті. (переглядаємо на всіх портах)
-    show mac - перегляд всіх маків
-    show mac interface gpon_onu 1/3/1:2 -перегляд маку по конкретній ОНУ
-    show mac vlan 602 - перегляд маку у влані
+##### Перегляд МАС-адрес
+    show mac dynamic - перегляд всіх маків
+    show mac interface gpon_onu 1/3/1:2 -перегляд МАС'у по конкретній ОНУ
+    show mac vlan 602 - перегляд МАС'у у влані
 ##### Перегляд логів. 
     show logging alarm 
 ## Додатково
