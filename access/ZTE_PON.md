@@ -34,6 +34,8 @@
 ##### Перегляд оптичних показників
     show pon power olt-rx gpon_olt-1/3/7 - перегляд оптики по всьому порту 7
     show pon power attenuation gpon_onu-1/3/1:6 - перегляд оптики по ОНУ
+
+    show optical-module-info xgei-1/1/1 - перегляд оптичних показників на UP-link інтерфейсі
 ###### Перегляд активної DHCP сесії
     show ip dhcp snooping dynamic database - перегляд всіх сесій
     show ip dhcp snooping dynamic ip - перегляд чи існує сесії по IP
