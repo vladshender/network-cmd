@@ -27,10 +27,10 @@
         , де х:
             disable - адміністративно закрити
             enable - адміністративно відкрити
-
-## Додатково
 ##### Перегляд uptime, soft
     show software 
+
+## Додатково
 ##### Перегляд оптичних показників
     show pon power olt-rx gpon_olt-1/3/7 - перегляд оптики по всьому порту 7
     show pon power attenuation gpon_onu-1/3/1:6 - перегляд оптики по ОНУ
