@@ -6,7 +6,13 @@
   * [Послуга L2VPN](checklist/l2vpn.md)
   * [Послуга BGP](checklist/bgp.md)
   * [Інші послуги](checklist/other.md)
-* Обладнання доступу
+* Core
+  * [Juniper](core/Juniper.md)
+* Distribution / Aggregation
+  * [Cisco](aggregation/Cisco.md)
+  * [Huawei 93xx та 53xx](aggregation/Huawei_93xx_53xx.md)
+  * [ZTE 82xx](aggregation/ZTE_82xx.md)
+* Access
   * [BDCOM](access/BDCOM.md)
   * [D-LINK](access/D-LINK.md)
   * [Huawei FTTB](access/Huawei_FTTB.md)
@@ -17,9 +23,5 @@
   * [Raisecom PON](access/Raisecom_PON.md)
   * [ZTE](access/ZTE.md)
   * [ZTE PON](access/ZTE_PON.md)
-* Дистрибуція та Агрегація
-  * [Cisco](aggregation/Cisco.md)
-  * [Huawei 93xx та 53xx](aggregation/Huawei_93xx_53xx.md)
-  * [ZTE 82xx](aggregation/ZTE_82xx.md)
-* Обладнання ядра
-  * [Juniper](core/Juniper.md)
+
+
