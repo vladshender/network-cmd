@@ -30,6 +30,9 @@
 - **Перегляд оптичних показників на інтерфейсі**:
     ```bash
     show optical-inform detail info interface gei-0/1/0/40
+    
+    show optical-inform details rx-power interface xgei-0/1/0/43
+    show optical-inform details tx-power interface xgei-0/1/0/43
     ```
     _Ця команда дає детальну інформацію про оптичні модулі на вибраному інтерфейсі._
 
