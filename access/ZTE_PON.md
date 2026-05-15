@@ -46,4 +46,27 @@
     ip dhcp snooping clear interface vport-1/3/7.3:1 CA21.72EB.58BC vlan 1300
 
 ## Конфігурація
+_Конфігурація відбувається через Систему Керування_
+##### Прописати SNMP-параметри для OLT
+    config t
+        snmp-server community encrypted *31*RNZdUtVWwH0DwdHkKNpiXSjaYl0o2mJdKNpiXc3K22S1OuXGdwZNF063K66OQeFQ3zrjyoBtpsWxUsbgOagM1lf4VfF3fcZnaJI1ug== view AllView ro
+        snmp-server community encrypted *31*RNZdUtVWwH0DwdHknw/IWZ8PyFmfD8hZnw/IWXk3OKtchzzXPmN3QZDtp4yv6TRscr9r16QLK4mKMkspy2CvXKAkmEwX+JBqwSbNqA== view AllView rw
+        snmp-server version v2c enable
+    exit
+Заходимо в Систему Керування (OLT буде червоним)
+Необхідно натиснути ПКМ на OLT (котрий необхідно відновити)
+Обрати вкладку Tools -> SNMP Ping -> Start
+![ping через СУ](images/my-photo.png)
+$\color{red}{\text{!!!Результат ping`у має бути вдалим}}$
+
+
+
+
+
+
+
+
+
+
+
 
