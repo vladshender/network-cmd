@@ -8,16 +8,10 @@
 - **Перегляд стану інтерфейсів**:
     ```bash
     show interface brief    - Вивід стану всіх інтерфейсів на обладнанні
-    ```
-
-- **Перегляд стану конкретної ONU на порту**:
-    _Для перевірки стану ONU на конкретному порту, вказати номер порту (наприклад, `0/4:42`):_
-    ```bash
-    show interface ePON 0/4:42
+    show interface ePON 0/4:42    - Вивід стану ОНУ абонента на конкретному порту
     ```
 
 - **Перегляд MAC-адреси від ONU**:
-    _Для перегляду MAC-адреси ONU на вказаному порту:_
     ```bash
     show mac address-table interface ePON 0/2:32
     ```
@@ -28,16 +22,17 @@
     show mac address-table vlan 604
     ```
 
-- **Перегляд логів по ONU**:
-    _Для перегляду логів, пов'язаних з конкретною ONU:_
+- **Перегляд логів**:
     ```bash
-    show logging | include EPON0/4:11
+    show logging    - перегляд всіх логів на обладнанні
+    show logging | include EPON0/4:11 - переглянути логи по конкретні ОНУ (не працює фільтр, потрібно переробити)
     ```
 
-- **Перегляд оптичних показників по всіх портах**:
-    _Для загального перегляду оптичних показників по портах ePON:_
+- **Перегляд оптичних показників**:
     ```bash
-    show epon optical-transceiver-diagnosis
+    show epon optical-transceiver-diagnosis    - загальний перегляд оптичних показників по портах ePON
+    show epon interface epon 0/3:1 onu ctc optical-transceiver-diagnosis    - для конкретного порту та ОНУ
+    show epon optical-transceiver-diagnosis interface EPON0/1:4
     ```
 
 - **Перегляд оптичних показників для конкретної ONU**:
