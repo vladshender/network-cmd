@@ -6,6 +6,7 @@
 #####  Детальніша інформація по ону
     show gpon-onu 1/1/4 information
     show gpon-onu 1/1/4 detail-information
+    show interface gpon-onu 1/1/4 creation-informatioon
 ##### Перегляд МАС-адреси по ONU 
     show mac-address-table l2-address interface gpon-onu 1/1/10 
     show mac-address-table l2-address vlan 602 
