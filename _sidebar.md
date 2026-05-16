@@ -8,6 +8,7 @@
   * [Інші послуги](checklist/other.md)
 * Core
   * [Juniper](core/Juniper.md)
+  * [DHCP Protocol](core/DHCP_Protocol.md)
 * Distribution / Aggregation
   * [Cisco](aggregation/Cisco.md)
   * [Huawei 93xx та 53xx](aggregation/Huawei_93xx_53xx.md)
