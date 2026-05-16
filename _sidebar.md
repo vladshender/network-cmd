@@ -1,11 +1,8 @@
 * [🏠 Головна](/README.md)
-* Checklist
-  * [Послуга GPON](checklist/gpon.md)
-  * [Послуга DSL](checklist/dsl.md)
-  * [Послуга L3VPN](checklist/l3vpn.md)
-  * [Послуга L2VPN](checklist/l2vpn.md)
-  * [Послуга BGP](checklist/bgp.md)
-  * [Інші послуги](checklist/other.md)
+* Швидкий доступ
+  * [Послуги](fast_access/services.md)
+  * [Конфігурації](checklist/configures.md)
+  * [Інше](checklist/other.md)
 * Core
   * [Juniper](core/Juniper.md)
   * [DHCP Protocol](core/DHCP_Protocol.md)
