@@ -75,6 +75,12 @@
         ```
         _Ця команда покаже інтерфейс DHCP абонента (наприклад, `demux0.xxxxx`) та відповідний логічний інтерфейс._
 
+  - **Перегляд етапу/стану DHCP-активації**:
+    ```bash
+    show dchp relay binding detail mac\ip clien
+    ```
+    _SELECTING - рекомендувати протестувати отримання IP прямим включенням ноутбуком без роутера в ону, якщо інтернет є - заміна роутера, якщо інтернету немає - заміна ону_
+
 - **Перегляд інтерфейсу DHCP абонента**:
     ```bash
     show interface demux0.xxxxx extensive
@@ -84,7 +90,7 @@
     ```bash
     show configure | display set | match xxxx
     ```
-    _Де `xxxx` береться з інтерфейсу `ae0.xxxx`._
+    _Де `xxxx` береться з інтерфейсу `ae0.xxxx`., а його можна взяти з команди `show dhcp relay binding ip-client`_
 
 ## Перевірка BGP
 
