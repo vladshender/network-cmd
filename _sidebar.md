@@ -1,5 +1,6 @@
 * [🏠 Головна](/README.md)
 * Швидкий доступ
+  * [Класифікація послуг](fast_access/services_clasification.md)
   * [Послуги](fast_access/services.md)
   * [Конфігурації](checklist/configures.md)
   * [Інше](checklist/other.md)
@@ -21,5 +22,3 @@
   * [Raisecom PON](access/Raisecom_PON.md)
   * [ZTE](access/ZTE.md)
   * [ZTE PON](access/ZTE_PON.md)
-
-
