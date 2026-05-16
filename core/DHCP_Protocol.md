@@ -1,8 +1,9 @@
 
-## Етапи DCHP
-![dhcp-stages](images/dhcp_stages.png)
+## Етапи DHCP
 
-![dhcp-states](images/dhcp_states.jpg)
+![dhcp-stages](../images/dhcp_stages.png)
+
+![dhcp-states](../images/dhcp_states.jpg)
 
 ### Довідник етапів отримання IP-адреси (Процес DORA)
 
