@@ -1,5 +1,5 @@
 
-## Етапи DHCP
+## DHCP Protocol
 
 ### Етапи DHCP
 ![dhcp-stages](../images/dhcp_stages.png)
