@@ -1,11 +1,13 @@
 
 ## Етапи DHCP
 
+### Етапи DHCP
 ![dhcp-stages](../images/dhcp_stages.png)
 
+### Стани DHCP
 ![dhcp-states](../images/dhcp_states.jpg)
 
-### Довідник етапів отримання IP-адреси (Процес DORA)
+### Довідник етапів отримання IP-адреси через DHCP (Процес DORA)
 
 1. **DISCOVER (Виявлення):**
    * **Хто надсилає:** Клієнт → Усім (Broadcast).
