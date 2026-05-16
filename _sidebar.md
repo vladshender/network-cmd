@@ -1,8 +1,8 @@
 * [🏠 Головна](/README.md)
 * Швидкий доступ
   * [Класифікація послуг](fast_access/services_clasification.md)
-  * [Послуги](fast_access/services.md)
-  * [Конфігурації](checklist/configures.md)
+  * [Алгоритми перевірки послуг](fast_access/services.md)
+  * [Інструкції конфігурування](checklist/configures.md)
   * [Інше](checklist/other.md)
 * Core
   * [Juniper](core/Juniper.md)
