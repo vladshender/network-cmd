@@ -12,7 +12,7 @@
     show gpon remote-onu interface eth gpon_onu_1/3/1:1 - перегляд швидкості на eth-порту ONU.
 ##### Перегляд МАС-адрес
     show mac dynamic - перегляд всіх маків
-    show mac interface gpon_onu 1/3/1:2 -перегляд МАС'у по конкретній ОНУ
+    show mac interface gpon_onu-1/3/1:2 -перегляд МАС'у по конкретній ОНУ
     show mac vlan 602 - перегляд МАС'у у влані
 ##### Перегляд логів. 
     show logging alarm 
