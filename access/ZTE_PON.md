@@ -67,10 +67,10 @@ Start -> Yes
 $\color{red}{\text{!!!Інколи потрібно змінювати SFTP -> FTP (якщо у списку будуть відсутні бекапи для обладнання)}}$  
 ![Select_Backup](../images/ZTE-PON_3.png)  
 Після того, як з’явиться надпис навпроти обраного раніше бекапу Success, необхідно перезавантажити ОЛТ:  
-![Select_Backup](../images/ZTE-PON_4.png)  
+![Complete_Backup](../images/ZTE-PON_4.png)  
 ПКМ на ОЛТ, System Management -> Reboot System  
 Хвилин 5-7 ОЛТ буде недоступний. Очікуйте  
-![Select_Backup](../images/ZTE-PON_5.png)  
+![Select_Reboot](../images/ZTE-PON_5.png)  
 
 
 
