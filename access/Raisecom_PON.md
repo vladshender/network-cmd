@@ -1,8 +1,10 @@
 ## Стандартна перевірка
 ##### Зайти в привілегійовий режим 
     enable (далі пароль centerukrtel1) 
-##### Перегляд статусу всіх ONU
+##### Перегляд статусу лінку всіх ONU до OLT
     show interface gpon-onu online-information
+##### Перегляд лінку від ОНУ до обладнання абонента
+    show gpon-onu 1/1/4 uni eth info
 #####  Детальніша інформація по ону
     show gpon-onu 1/1/4 information
     show gpon-onu 1/1/4 detail-information
