@@ -30,9 +30,9 @@
 
 - **Перегляд оптичних показників**:
     ```bash
-    show epon optical-transceiver-diagnosis    - загальний перегляд оптичних показників по портах ePON
-    show epon interface epon 0/3:1 onu ctc optical-transceiver-diagnosis    - для конкретного порту та ОНУ
-    show epon optical-transceiver-diagnosis interface EPON0/1:4
+    show epon optical-transceiver-diagnosis    - сигнал прийому на ОЛТ портах по всім ОНУ
+    show epon interface epon 0/3:1 onu ctc optical-transceiver-diagnosis - потужність сигналу, який ОНУ отримує та передає
+    show epon optical-transceiver-diagnosis interface EPON0/1:4 - потужність сигналу, який OLT отримує від ОНУ
     ```
 
 - **Перегляд оптичних показників для конкретної ONU**:
