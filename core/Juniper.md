@@ -34,11 +34,11 @@
 - **Перегляд конфігурації абонента**:
     - Для `l3vpn`:
         ```bash
-        show route table l3vpn-obu.ua ip client | match irb
+        show route table l3vpn-obu.ua [ip-client] | match irb
         ```
     - Для `profi`:
         ```bash
-        show route ip | match irb
+        show route [ip] | match irb
         ```
     - Для загальної конфігурації:
         ```bash
@@ -53,7 +53,7 @@
         ```
     - Перевірка відповідності IP та MAC в ARP таблиці:
         ```bash
-        show arp | match ip or mac
+        show arp | match [ip or mac]
         ```
 
 ## Перевірка абонента DHCP
@@ -71,13 +71,13 @@
 - **Перевірка прив'язки DHCP**:
     - Перегляд прив'язки для IP клієнта:
         ```bash
-        show dhcp relay binding ip-client
+        show dhcp relay binding [ip-client]
         ```
         _Ця команда покаже інтерфейс DHCP абонента (наприклад, `demux0.xxxxx`) та відповідний логічний інтерфейс._
 
   - **Перегляд етапу/стану DHCP-активації**:
     ```bash
-    show dchp relay binding detail mac\ip clien
+    show dchp relay binding detail [mac\ip clien]
     ```
     _SELECTING - рекомендувати протестувати отримання IP прямим включенням ноутбуком без роутера в ону, якщо інтернет є - заміна роутера, якщо інтернету немає - заміна ону_
 
@@ -101,21 +101,21 @@
         ```
     - Детальна інформація по BGP сесіям:
         ```bash
-        show bgp neighbour
+        show bgp neighbor
         ```
     - Перевірка конкретної BGP сесії:
         ```bash
-        show bgp neighbour ip-client
+        show bgp neighbor [ip-client]
         ```
 
 - **Перевірка переданих та отриманих IP-prefixes**:
     - Для перевірки рекламованих через BGP IP-префіксів:
         ```bash
-        show route advertising-protocol bgp ip-client
+        show route advertising-protocol bgp [ip-client]
         ```
     - Для перевірки отриманих через BGP IP-префіксів:
         ```bash
-        show route receive-protocol bgp ip-client
+        show route receive-protocol bgp [ip-client]
         ```
 
 ## Пінг абонентів, обладнання та сайтів
