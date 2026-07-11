@@ -26,6 +26,7 @@
         display mac-address vlan 3311
         ```
 
+
 - **Перегляд активних алармів**:
     _Для перегляду активних алармів на порту або ONU абонента:_
     - Для перегляду всіх активних алармів:
@@ -56,6 +57,15 @@
         display alarm history alarmparameter 0/2/4
         ```
 
+- **Перегляд оптичних показників на ОНУ**:
+  ```bash
+    >enable  
+    #config       
+    (config)#interface gpon 0/1 
+    (config-if-gpon-0/1)#display ont optical-info 4 13
+    ```
+
+
 ## Вимкнення порту чи ONU
 
 - **Вимкнення порту або ONU **:
@@ -70,5 +80,17 @@
   interface giu 0/20
   shutdown
   ```
-  
 
+## Перегляд CRC-помилок на UP-link інтерфейсу
+  ```bash
+    #config                      
+    (config)#interface eth 0/2
+    (config-if-eth-0/2)#display port statistics 0
+  ```
+
+## Перегляд оптичних показників на UP-link інтерфейсу
+  ```bash
+    #config                      
+    (config)#interface eth 0/2
+    display port ddm-info 1
+  ```
