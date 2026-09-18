@@ -127,9 +127,7 @@ upload system-boot tftp 10.36... ISCOM2600G-HI_SYSTEM_3.50.336_20180611
  
 1) download bootstrap tftp 10.36.202.33 ISCOM2600G_BOOT_2.0.11
  
-2 ) download system-boot tftp <FTP-IP> ISCOM2600G-HI_SYSTEM_3.73.115_20240116
- 
-<FTP-IP>В вас це мабуть 10.36.202.222
+2 ) download system-boot tftp 10.36.202.222 ISCOM2600G-HI_SYSTEM_3.73.115_20240116
  
  
 _______________________2924_3024___________________________________________-
