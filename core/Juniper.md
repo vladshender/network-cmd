@@ -168,6 +168,10 @@
         ```bash
         ping routing-instance ZTE_NEW-control
         ```
+    - Пінг Raisecom агрегації:
+        ```bash
+        ping routing-instance ISCOM-control
+        ```
 
 - **Пінг з шлюзу абонента**:
     ```bash
