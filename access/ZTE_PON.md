@@ -9,7 +9,7 @@
 ##### Перегляд інформації по ONU 
     show gpon onu detail-info gpon_onu-1/3/1:1
     show pon onu information gpon_onu-1/3/1:1
-    show gpon remote-onu interface eth gpon_onu_1/3/1:1 - перегляд швидкості на eth-порту ONU.
+    show gpon remote-onu interface eth gpon_onu-1/3/1:1 - перегляд швидкості на eth-порту ONU.
 ##### Перегляд МАС-адрес
     show mac dynamic - перегляд всіх маків
     show mac interface gpon_onu-1/3/1:2 -перегляд МАС'у по конкретній ОНУ
