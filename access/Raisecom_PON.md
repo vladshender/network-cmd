@@ -9,6 +9,8 @@
     show gpon-onu 1/1/4 information
     show gpon-onu 1/1/4 detail-information
     show interface gpon-onu 1/1/4 creation-informatioon
+#####  Переглянути інформацію, на які прописаний влан
+    show vlan [x] member-port
 ##### Перегляд МАС-адреси по ONU 
     show mac-address-table l2-address interface gpon-onu 1/1/10 
     show mac-address-table l2-address vlan 602 
